@@ -1,7 +1,7 @@
 import React from 'react';
-import './Tip.css'
+import './Tips.css'
 
-const Tip = () => {
+const Tips = () => {
     return (
         <div className='Tip'>
             <div className='Tip_h'>
@@ -11,11 +11,11 @@ const Tip = () => {
             </div>
             <ul>
                 <li><img src='/luggage.jpg' alt='luggage'/></li>
-                <li></li>
-                <li></li>
+                <li><img src='/luggage.jpg' alt='luggage'/></li>
+                <li><img src='/luggage.jpg' alt='luggage'/></li>
             </ul>
         </div>
     );
 };
 
-export default Tip;
+export default Tips;

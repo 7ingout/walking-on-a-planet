@@ -1,5 +1,5 @@
 .Tip {
-    height: 510px;
+    height: 780px;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
@@ -36,4 +36,24 @@
 }
 .Tip .big_char {
     font-weight: bold;
+}
+.Tip ul {
+    margin-top: 80px;
+    display: flex;
+}
+.Tip ul li:first-child {
+    width: 55%;
+}
+.Tip ul li:first-child img {
+    width: 100%;
+    border-radius: 25px;
+}
+.Tip ul li:not(:first-child) {
+    width: 19.5%;
+    margin-left: 3%;
+}
+.Tip ul li:not(:first-child) img {
+    width: 100%;
+    height: 400px;
+    border-radius: 40%;
 }

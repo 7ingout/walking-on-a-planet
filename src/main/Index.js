@@ -2,7 +2,7 @@ import React from 'react';
 import Recommand from './components/Recommand';
 import Visual from './components/Visual';
 import Event from './components/Event';
-import Tip from './components/Tip';
+import Tips from './components/Tips';
 
 const Index = () => {
     return (
@@ -10,7 +10,7 @@ const Index = () => {
             <Visual />
             <Recommand />
             <Event/>
-            <Tip/>
+            <Tips/>
         </>
     );
 };
