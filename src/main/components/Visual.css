@@ -51,21 +51,18 @@
     opacity: 0.2;
 }
 .visual .visual_box div:first-child:hover .arrow {
-    opacity: 1;
     left: 560px;
 }
 .visual .visual_box div:nth-child(2):hover:after {
     opacity: 0.2;
 }
 .visual .visual_box div:nth-child(2):hover .arrow {
-    opacity: 1;
     left: 560px;
 }
 .visual .visual_box div:last-child:hover:after {
     opacity: 0.2;
 }
 .visual .visual_box div:last-child:hover .arrow {
-    opacity: 1;
     left: 560px;
 }
 .visual .pic_title {
@@ -81,9 +78,8 @@
     bottom: 20px;
     left: 550px;
     z-index: 1;
-    width: 25px;
-    height: 25px;
-    opacity: 0;
+    width: 23px;
+    height: 23px;
     transition: 0.3s;
 }
 .visual .arrow img {

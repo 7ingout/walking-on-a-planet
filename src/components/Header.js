@@ -12,7 +12,7 @@ const Header = () => {
                 Walking <span><img src='/Earth.png' alt='earth'/></span>n a Planet
             </h1>
             <ul className='menu_box'>
-                {/* <li>Destinations</li> */}
+                <li>story</li>
                 <li>shop</li>
                 <li>login</li>
                 <li>join</li>
