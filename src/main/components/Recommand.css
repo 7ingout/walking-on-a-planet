@@ -3,7 +3,6 @@
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 80px;
 }
 .recommand .recommand_h {
@@ -26,8 +25,9 @@
     transition: 0.2s;
 }
 .recommand .recommand_h div:last-child:hover {
+    border: none;
     color: white;
-    background-color: #0057d9;
+    background-color: var(--main-color);
 }
 .recommand .small_char {
     font-size: 20px;
@@ -40,7 +40,6 @@
 .recommand .pics > ul {
     margin-top: 80px;
     display: flex;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 .recommand .pics > ul > li {
     width: 31.3333%;
@@ -62,21 +61,9 @@
     font-weight: bold;
     position: relative;
     display: inline;
+    text-decoration: none;
+    transition: 0.3s;
 }
-.recommand .pics > ul > li > ul > li:first-child {
-    position: relative;
-}
-.recommand .pics > ul > li > ul li:first-child::after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    bottom: -60px;
-    left: 0;
-    background-color: black;
-    transition: 0.5s;
-}
-.recommand .pics > ul > li > ul li:first-child:hover:after {
-    width: 23%;
+.recommand .pics > ul > li > ul li:nth-child(2):hover {
+    text-decoration: underline;
 }

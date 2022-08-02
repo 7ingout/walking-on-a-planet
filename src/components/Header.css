@@ -13,7 +13,6 @@
     background-color: transparent;
     color: white;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
     z-index: 50;
 }
 .header .search_box {
@@ -24,14 +23,14 @@
 .header .search_box li:first-child{
     width: 25px;
     height: 25px;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 .header .search_box li:first-child img{
     width: 100%;
 }
 .header h1 {
     letter-spacing: 3px;
-    margin-left: 90px;
+    margin-left: 108px;
     font-size: 26px;
     height: 40px;
 }

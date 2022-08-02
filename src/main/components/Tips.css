@@ -1,13 +1,12 @@
 .Tip {
-    height: 780px;
+    height: 770px;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 80px;
 }
 .Tip .Tip_h {
-    margin-top: 120px;
+    margin-top: 90px;
     font-size: 48px;
     position: relative;
 }
@@ -26,8 +25,9 @@
     transition: 0.2s;
 }
 .Tip .Tip_h div:last-child:hover {
+    border: none;
     color: white;
-    background-color: #0057d9;
+    background-color: var(--main-color);
 }
 .Tip .small_char {
     font-size: 20px;
@@ -46,14 +46,106 @@
 }
 .Tip ul li:first-child img {
     width: 100%;
+    height: 100%;
     border-radius: 25px;
 }
 .Tip ul li:not(:first-child) {
     width: 19.5%;
     margin-left: 3%;
+    overflow: hidden;
 }
 .Tip ul li:not(:first-child) img {
     width: 100%;
-    height: 400px;
+    height: 365px;
+    object-fit: cover;
     border-radius: 40%;
+}
+.Tip_ul .first_tip {
+    position: relative;
+}
+.Tip_ul .first_tip div:nth-child(2) {
+    letter-spacing: 2px;
+    padding-left: 50px;
+    position: absolute;
+    bottom: 210px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.Tip_ul .first_tip div:nth-child(3) {
+    letter-spacing: 2px;
+    padding-left: 50px;
+    position: absolute;
+    bottom: 160px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.Tip_ul .first_tip div:nth-child(3):hover {
+    text-decoration: underline;
+}
+.Tip_ul .first_tip div:nth-child(4) {
+    letter-spacing: 2px;
+    padding-left: 50px;
+    position: absolute;
+    bottom: 130px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.Tip_ul .first_tip div:nth-child(5) {
+    letter-spacing: 2px;
+    padding-left: 50px;
+    position: absolute;
+    bottom: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.Tip_ul .second_tip {
+    line-height: 1.5;
+}
+.Tip_ul .second_tip div {
+    padding-left: 10px;
+}
+.Tip_ul .second_tip div:nth-child(2) {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.Tip_ul .second_tip div:nth-child(3) {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.Tip_ul .second_tip div:nth-child(3):hover {
+    text-decoration: underline;
+}
+.Tip_ul .second_tip div:nth-child(4) {
+    font-size: 16px;
+    margin: 15px 0;
+}
+.Tip_ul .thrid_tip {
+    line-height: 1.5;
+}
+.Tip_ul .third_tip div {
+    padding-left: 10px;
+}
+.Tip_ul .third_tip div:nth-child(2) {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.Tip_ul .third_tip div:nth-child(3) {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.Tip_ul .third_tip div:nth-child(3):hover {
+    text-decoration: underline;
+}
+.Tip_ul .third_tip div:nth-child(4) {
+    font-size: 16px;
+    margin: 18px 0;
 }

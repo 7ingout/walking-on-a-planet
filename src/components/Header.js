@@ -9,7 +9,7 @@ const Header = () => {
                 <li>Search</li>
             </ul>
             <h1>
-                Walking <span><img src='/Earth.png' alt='earth'/></span>n a planet
+                Walking <span><img src='/Earth.png' alt='earth'/></span>n a Planet
             </h1>
             <ul className='menu_box'>
                 {/* <li>Destinations</li> */}

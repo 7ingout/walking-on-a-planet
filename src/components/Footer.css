@@ -1,0 +1,23 @@
+.Footer {
+    height: 800px;
+    position: relative;
+}
+.Footer_box h1{
+    color: var(--main-color);
+}
+.inner_container {
+    position: absolute;
+    background-color: black;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+.Footer_bottom {
+    background-color: black;
+    color: white;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
