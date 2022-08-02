@@ -1,9 +1,89 @@
 .Footer {
-    height: 800px;
+    height: 600px;
     position: relative;
 }
 .Footer_box h1{
+    margin-top: 40px;
     color: var(--main-color);
+    font-weight: bold;
+}
+.Footer_box div:nth-child(2) {
+    margin: 10px 0;
+}
+.Footer_box div:nth-child(3) {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.Footer_box div:nth-child(5) {
+    margin-top: 40px;
+    font-weight: bold;
+}
+.Footer_box div:nth-child(6) {
+    color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.Footer_box div:nth-child(7) {
+    font-size: 16px;
+    width: 110px;
+    background-color: white;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.2s;
+    border: 1px solid #aaa;
+    font-weight: bold;
+}
+.Footer_box div:nth-child(7):hover {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}
+.Footer_box div:nth-child(8) {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.Footer .sns_menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    margin-left: -10px;
+}
+.Footer .sns_menu li {
+    cursor: pointer;
+}
+.Footer .sns_menu li img {
+    width: 100%;
+}
+.Footer .big_ul {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Footer .big_ul > li:not(:first-child) {
+    margin-top: 40px;
+}
+.Footer .big_ul > li:not(:first-child) .bold {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.Footer .big_ul > li:not(:first-child) #la_li {
+    margin-top: 40px;
+}
+.Footer .big_ul > li:not(:first-child) .lala_li {
+    margin-top: -10px;
+}
+.Footer .big_ul > li:not(:first-child) > ul li:not(:first-child) {
+    line-height: 2;
 }
 .inner_container {
     position: absolute;
@@ -15,8 +95,8 @@
 .Footer_bottom {
     background-color: black;
     color: white;
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
