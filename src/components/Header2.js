@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './Header2.css'
 
-const Header = () => {
+const Header2 = () => {
     return (
-        <div className='header'>
+        <div className='header2'>
             <ul className='search_box'>
-                <li><img src='/search.png' alt='search'/></li>
+                <li><img src='/search2.png' alt='search'/></li>
                 <li>Search</li>
             </ul>
             <h1>
-                <Link to = "/">Walking <span><img src='/Earth.png' alt='earth'/></span>n a Planet</Link>
+                <Link to = "/">Walking <span><img src='/Earth2.png' alt='earth'/></span>n a Planet</Link>
             </h1>
             <ul className='menu_box'>
                 <li>story</li>
@@ -22,4 +22,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Header2;

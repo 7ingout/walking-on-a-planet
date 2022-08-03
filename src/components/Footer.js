@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -19,7 +20,7 @@ const Footer = () => {
                         </ul>
                         <div>SUBSCRIBE</div>
                         <div>20% 할인 쿠폰 받기</div>
-                        <div>Sign Up</div>
+                        <div><Link to='/join'>Sign Up</Link></div>
                         <div>Subscribe to Walking On a Planet newsletters and promotions. Read our Privacy Policy.</div>
                     </div>
                 </li>

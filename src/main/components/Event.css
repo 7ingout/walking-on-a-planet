@@ -1,9 +1,5 @@
-.Event {
-    height: 100vh;
-}
 .Event .Event_img {
     position: relative;
-    height: 100vh;
 }
 .Event .Event_img img{
     width: 100%;

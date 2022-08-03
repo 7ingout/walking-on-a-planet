@@ -5,3 +5,10 @@ a { text-decoration: none; color: inherit;}
 li { list-style: none;}
 .App { font-size: 16px; font-family: 'Montserrat', 'Noto Sans KR', sans-serif;}
 :root { --main-color: #0057d9; }
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.index .indi li:hover{
+    background-color: #aaa;
+}

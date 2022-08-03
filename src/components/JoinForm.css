@@ -1,0 +1,104 @@
+.join {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.join .joinform {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.join .joinform .small_menu {
+    font-size: 14px;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+.join .joinform .small_menu span {
+    margin: 0 3px;
+}
+.join .joinform .small_menu span:not(:last-child) {
+    color: #999;
+}
+.join .joinform .small_menu span:last-child {
+    font-weight: bold;
+}
+.join .joinform h1 {
+    text-align: center;
+    padding-bottom: 60px;
+}
+.join .joinform .join_table {
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 1px solid #eee;
+}
+.join .joinform .join_table th {
+    background-color: #f6f6f6;
+    text-align: left;
+    width: 20%;
+    height: 60px;
+    color: #555;
+    padding-left: 40px;
+}
+.join .joinform .join_table th span {
+    display: inline-block;
+    color:crimson;
+    padding-left: 10px;
+}
+.join .joinform .join_table tbody tr td {
+    padding-left: 40px;
+}
+.join .joinform .join_table tbody tr td input {
+    margin-right: 40px;
+}
+.join .joinform .join_table tbody tr td {
+    /* display: block; */
+    accent-color: black;
+    width: 20px;
+}
+.join .joinform h1:nth-child(4), .join .joinform h1:nth-child(6) {
+    text-align: left;
+    font-size: 26px;
+    padding-top: 60px;
+}
+.join .joinform table:nth-child(5) tr{
+    border-bottom: 1px solid #eee;
+}
+.join .joinform table:nth-child(5) tr input {
+    height: 32px;
+    width: 300px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #444;
+}
+.join .joinform table:nth-child(7) tr td input{
+    height: 32px;
+    width: 150px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #444;
+    margin-right: 10px;
+}
+.join .joinform table:nth-child(7) tr td input:not(:first-child) {
+    margin-left: 10px;
+    width: 100px;
+}
+.join .joinform .form_btn {
+    background-color: #333;
+    border: none;
+    color: #eee;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    cursor: pointer;
+}
+.join .joinform .btn_div {
+    width: 100%;
+    text-align: center;
+}

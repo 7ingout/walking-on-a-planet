@@ -56,7 +56,7 @@
     height: 100%;
     border-radius: 25px;
 }
-.recommand .pics > ul > li > ul li:nth-child(2) {
+.li_un {
     font-size: 24px;
     font-weight: bold;
     position: relative;
@@ -64,6 +64,6 @@
     text-decoration: none;
     transition: 0.3s;
 }
-.recommand .pics > ul > li > ul li:nth-child(2):hover {
+.mo_li:hover .li_un{
     text-decoration: underline;
 }

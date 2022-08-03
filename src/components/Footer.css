@@ -1,9 +1,9 @@
 .Footer {
-    height: 600px;
+    height: 650px;
     position: relative;
 }
 .Footer_box h1{
-    margin-top: 40px;
+    margin-top: 80px;
     color: var(--main-color);
     font-weight: bold;
 }
@@ -38,6 +38,7 @@
     transition: 0.2s;
     border: 1px solid #aaa;
     font-weight: bold;
+    cursor: pointer;
 }
 .Footer_box div:nth-child(7):hover {
     background-color: var(--main-color);
@@ -70,7 +71,7 @@
     align-items: flex-start;
 }
 .Footer .big_ul > li:not(:first-child) {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 .Footer .big_ul > li:not(:first-child) .bold {
     font-weight: bold;
