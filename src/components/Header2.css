@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .header2 .search_box li:first-child{
     width: 25px;
@@ -25,11 +26,94 @@
 .header2 .search_box li:first-child img{
     width: 100%;
 }
+
+.search_div {
+    border: 1px solid #ccc;
+    position: absolute;
+    background-color: white;
+    width: 460px;
+    height: 210px;
+    left: 0;
+    top: 50px;
+    border-radius: 10px;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+}
+.header2 .search_div .small_search_div {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #eee;
+    background-image: url('/public/icon/search2.png');
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: 5px;
+}
+.header2 .search_div .small_search {
+    padding-left: 5px;
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--main-color);
+    width: 360px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+}
+.header2 .search_div .close_btn {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    color: #777;
+    font-size: 52px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.header2 .search_div > div:first-child {
+    border-bottom: 1px solid #ddd;
+    height: 70px;
+    width: 95%;
+}
+.header2 .search_div .search_ul {
+    position: absolute;
+    top: 80px;
+    color: #222;
+    left: 30px;
+}
+.header2 .search_div .search_ul h3 {
+    font-size: 14px;
+} 
+.header2 .search_div .search_ul ul {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.header2 .search_div .search_ul li {
+    width: 120px;
+    /* background-color: #777; */
+    margin: 12px 0;
+    background-image: url('/public/icon/mapsign.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-position: px; */
+}
+.header2 .search_div .search_ul li span {
+    width: 30px;
+    display: inline-block;
+}
 .header2 h1 {
     letter-spacing: 3px;
-    margin-left: 179px;
     font-size: 26px;
     height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .header2 h1 span {
     display:inline-block;

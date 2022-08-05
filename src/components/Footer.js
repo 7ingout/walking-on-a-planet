@@ -9,14 +9,14 @@ const Footer = () => {
                 <li>
                     <div className='Footer_box'>
                         <h1>Walking On a Planet</h1>
-                        <div>For Explorers Everywhere</div>
+                        <div>나를 찾아 떠나는 여행</div>
                         <div>FOLLOW US</div>
                         <ul className='sns_menu'>
-                            <li><img src='/facebook.png' alt='facebook'/></li>
-                            <li><img src='/instagram.png' alt='instagram'/></li>
-                            <li><img src='/twiter.png' alt='twiter'/></li>
-                            <li><img src='/youtube.png' alt='youtube'/></li>
-                            <li><img src='/line.png' alt='line'/></li>
+                            <li><img src='/icon/facebook.png' alt='facebook'/></li>
+                            <li><img src='/icon/instagram.png' alt='instagram'/></li>
+                            <li><img src='/icon/twiter.png' alt='twiter'/></li>
+                            <li><img src='/icon/youtube.png' alt='youtube'/></li>
+                            <li><img src='/icon/line.png' alt='line'/></li>
                         </ul>
                         <div>SUBSCRIBE</div>
                         <div>20% 할인 쿠폰 받기</div>

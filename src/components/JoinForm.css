@@ -39,6 +39,11 @@
     color: #555;
     padding-left: 40px;
 }
+.small_span {
+    color: #777;
+    font-size: 14px;
+    margin-left: -20px;
+}
 .join .joinform .join_table th span {
     display: inline-block;
     color:crimson;
@@ -59,6 +64,7 @@
     text-align: left;
     font-size: 26px;
     padding-top: 60px;
+    padding-bottom: 30px;
 }
 .join .joinform table:nth-child(5) tr{
     border-bottom: 1px solid #eee;
@@ -97,8 +103,63 @@
     margin-top: 100px;
     margin-bottom: 200px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.join .joinform .form_btn:hover {
+    background-color: #111;
 }
 .join .joinform .btn_div {
     width: 100%;
     text-align: center;
+}
+.postCode_btn {
+    position: absolute;
+    top: 82%;
+    left: 61.5%;
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    border: none;
+    background-color: #666;
+    color: white;
+    cursor: pointer;
+}
+.search_Add input {
+    margin: 8px 0;
+}
+.search_Add input:nth-child(1){
+    margin-top: 14px;
+}
+.white_btn {
+    margin-left: -30px;
+    height: 32px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #444;
+    cursor: pointer;
+}
+.join .joinform table:nth-child(5) tr:nth-child(5) input:first-child {
+    width: 160px;
+}
+.search_Add input:nth-child(3) {
+    display: block;
+}
+.join .joinform table:nth-child(5) tr:nth-child(5) input:nth-child(3) {
+    width: 600px;
+}
+.search_Add input:nth-child(4) {
+    margin-bottom: 14px;
+}
+.join .joinform table:nth-child(5) tr:nth-child(5) input:nth-child(4) {
+    width: 600px;
+}
+#doubleCk {
+    margin-right: 40px;
+    /* margin-left: -50px; */
+    padding-top: 5px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
 }

@@ -7,7 +7,9 @@ import Shop from './components/Shop';
 import Pics from './components/Pics';
 import Header from '../components/Header';
 
-const Index = () => {
+const Index = ( {trips} ) => {
+    // Indi
+    // Indi Style
     const style = {
         position: 'fixed',
         top: '50%',
@@ -25,14 +27,22 @@ const Index = () => {
         borderRadius: '25px',
         cursor: 'pointer'
     }
+    // Indi Scroll
     const visual = () => window.scrollTo({top:0, left:0, behavior:'auto'});
     // const recommand = () => window.scrollTo({top:805, left:0, behavior:'auto'});
     const event = () => window.scrollTo({top:1530, left:0, behavior:'auto'});
     const tips = () => window.scrollTo({top:2480, left:0, behavior:'auto'});
     const shop = () => window.scrollTo({top:3500, left:0, behavior:'auto'})
     const pics = () => window.scrollTo({top:4400, left:0, behavior:'auto'})
+    // /Indi
     return (
         <div className='index'>
+            <Visual />
+            <Recommand />
+            <Event />
+            <Tips />
+            <Shop />
+            <Pics />
             <Header/>
             <ul style={style} className='indi'>
                 <li style={li_style} onClick={visual}></li>
@@ -42,12 +52,6 @@ const Index = () => {
                 <li style={li_style} onClick={shop}></li>
                 <li style={li_style} onClick={pics}></li>
             </ul>
-            <Visual />
-            <Recommand />
-            <Event />
-            <Tips />
-            <Shop />
-            <Pics/>
         </div>
     );
 };

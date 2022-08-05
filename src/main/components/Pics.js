@@ -28,27 +28,27 @@ const Pics = () => {
                 autoplay={{delay: 5000}}
             >
                 <SwiperSlide>
-                        <img className='im1' src='/1.jpg' alt='1' />
+                        <img className='im1' src='/pics/1.jpg' alt='1' />
                         <div className='ti'>이탈리아의 산맥, 돌로마이트</div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='im2' src='/2.jpg' alt='2'/>
+                    <img className='im2' src='/pics/2.jpg' alt='2'/>
                     <div className='ti'>오스트리아의 마을, 할슈타트</div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='im3' src='/3.jpg' alt='3'/>
+                    <img className='im3' src='/pics/3.jpg' alt='3'/>
                     <div className='ti'>체코의 수도, 프라하</div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='im4' src='/4.jpg' alt='4'/>
+                    <img className='im4' src='/pics/4.jpg' alt='4'/>
                     <div className='ti'>브라질의 도시, 리우데자네이루</div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='im5' src='/5.jpg' alt='5'/>
+                    <img className='im5' src='/pics/5.jpg' alt='5'/>
                     <div className='ti'>아시아의 사막, 고비 사막</div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='im6' src='/6.jpg' alt='6'/>
+                    <img className='im6' src='/pics/6.jpg' alt='6'/>
                     <div className='ti'>독일의 도시, 함부르크</div>
                 </SwiperSlide>
             </Swiper>

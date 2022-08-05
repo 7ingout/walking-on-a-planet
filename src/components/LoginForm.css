@@ -1,0 +1,87 @@
+.login {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.login .loginform {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.login .loginform .center_table {
+    display: flex;
+    justify-content: center;
+}
+.login .loginform .small_menu {
+    font-size: 14px;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+.login .loginform .small_menu span {
+    margin: 0 3px;
+}
+.login .loginform  .small_menu span:not(:last-child) {
+    color: #999;
+}
+.login .loginform  .small_menu span:last-child {
+    font-weight: bold;
+}
+.login .loginform  h1 {
+    text-align: center;
+    padding-bottom: 80px;
+}
+.login .loginform .login_table {
+    width: 25%;
+    /* background-color: pink; */
+    text-align: left;
+}
+.login .loginform .login_table th {
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 10px
+}
+.login .loginform .login_table input {
+    border: none;
+    border-bottom: 1px solid #ddd;;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+    /* padding-left: 5px; */
+    outline: none;
+}
+.login .loginform .login_table tbody tr:nth-child(6) {
+    font-size: 14px;
+    color: #555;
+}
+.login .loginform .login_table tbody tr:nth-child(6) td {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.login .loginform .form_btn {
+    background-color: #333;
+    border: none;
+    color: #eee;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login .loginform  .form_btn:hover {
+    background-color: #111;
+}
+#join_btn {
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    background-color: white;
+    color: #555;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    margin-bottom: 180px;
+    width: 100%;
+}
+#join_btn:hover {
+    border: 1px solid #111;
+}
