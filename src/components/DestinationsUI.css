@@ -10,14 +10,14 @@
 }
 .destination .des_header h1 {
     position: absolute;
-    bottom: 50px;    
+    bottom: 54px;    
     color: white;
     font-size: 48px;
     font-weight: bolder;
 }
 .destination .des_header div {
     position: absolute;
-    bottom: 20px;    
+    bottom: 22px;    
     color: white;
     font-size: 14px;
     width: 280px;

@@ -9,6 +9,7 @@ import { getCookie } from './util/cookie';
 import { useEffect } from 'react';
 import { setLogin } from './modules/logincheck';
 import DestinationsContainer from './components/DestinationsContainer';
+import EventContainer from './components/EventContainer';
 // import DetailTrip from './components/DetailTrip';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     if(uname){
       dispatch(setLogin())
     }
+  //eslint-disable-next-line
   },[])
   return (
     <div className="App">
@@ -27,7 +29,7 @@ function App() {
           <Route path="/login" element={<LoginForm/>}/>
           <Route path="/destinations" element={<DestinationsContainer />}/>
           {/* <Route path="/detailview/:id" element={<DetailTrip/>}/> */}
-        
+          <Route path="/event" element={<EventContainer/>}/>
         </Routes>
       <Footer />
     </div>

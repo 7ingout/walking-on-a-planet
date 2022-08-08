@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import "../aos.css";
+import "../../aos.css";
 import './Recommand.css'
 
 const Recommand = ( {recommand} ) => {

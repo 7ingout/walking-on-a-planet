@@ -1,6 +1,7 @@
 import React from 'react';
 import Recommand from '../components/Recommand';
 import './RecommandUI.css'
+import { Link } from 'react-router-dom';
 
 const RecommandUI = ( {recommands} ) => {
     return (
@@ -8,7 +9,7 @@ const RecommandUI = ( {recommands} ) => {
             <div className='recommand_h'>
                 <div className='small_char'>PLAN YOUR TRIP</div>
                 <div className='big_char'>Where to next?</div>
-                <div>view all destinations</div>
+                <div><Link to='/destinations'>view all destinations</Link></div>
             </div>
             <ul>
                 {recommands.map(recommand=> (

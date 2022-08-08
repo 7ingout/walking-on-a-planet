@@ -52,7 +52,7 @@ const Header = () => {
                 <Link to = "/">Walking <span><img src='/icon/Earth.png' alt='earth'/></span>n a Planet</Link>
             </h1>
             <ul className='menu_box'>
-                <li>event</li>
+                <li><Link to ='/event'>event</Link></li>
                 <li><Link to = "/destinations">destinations</Link></li>
                 <li>shop</li>
                 { isLogin &&
