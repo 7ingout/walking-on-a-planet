@@ -1,11 +1,12 @@
 import React from 'react';
-import Recommand from './components/Recommand';
-import Visual from './components/Visual';
+import VisualContainer from './container/VisualContainer';
+import RecommandContainer from './container/RecommandContainer';
 import Event from './components/Event';
 import Tips from './components/Tips';
 import Shop from './components/Shop';
-import Pics from './components/Pics';
+import PicContainer from './container/PicContainer';
 import Header from '../components/Header';
+
 
 const Index = ( {trips} ) => {
     // Indi
@@ -37,13 +38,13 @@ const Index = ( {trips} ) => {
     // /Indi
     return (
         <div className='index'>
-            <Visual />
-            <Recommand />
+            <Header/>
+            <VisualContainer />
+            <RecommandContainer />
             <Event />
             <Tips />
             <Shop />
-            <Pics />
-            <Header/>
+            <PicContainer />
             <ul style={style} className='indi'>
                 <li style={li_style} onClick={visual}></li>
                 {/* <li style={li_style} onClick={recommand}></li> */}

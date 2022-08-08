@@ -1,0 +1,43 @@
+.RecoomandUI {
+    height: 510px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+.RecoomandUI .recommand_h {
+    margin-top: 100px;
+    font-size: 48px;
+    position: relative;
+}
+.RecoomandUI .recommand_h div:last-child {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    width: 220px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.RecoomandUI .recommand_h div:last-child:hover {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+}
+.RecoomandUI .small_char {
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+}
+.RecoomandUI .big_char {
+    font-weight: bold;
+}
+.RecoomandUI > ul {
+    display: flex;
+    overflow-x: hidden;
+}

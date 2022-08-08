@@ -1,57 +1,16 @@
-.recommand {
-    height: 510px;
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    margin-bottom: 80px;
-}
-.recommand .recommand_h {
-    margin-top: 920px;
-    font-size: 48px;
-    position: relative;
-}
-.recommand .recommand_h div:last-child {
-    position: absolute;
-    right: 0px;
-    top: 40px;
-    width: 220px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    border: 1px solid #aaa;
-    font-size: 16px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.2s;
-}
-.recommand .recommand_h div:last-child:hover {
-    border: none;
-    color: white;
-    background-color: var(--main-color);
-}
-.recommand .small_char {
-    font-size: 20px;
-    font-weight: bold;
-    color: #aaa;
-}
-.recommand .big_char {
-    font-weight: bold;
-}
-.recommand .pics > ul {
+.Recommand {
     margin-top: 80px;
-    display: flex;
-}
-.recommand .pics > ul > li {
     width: 31.3333%;
+    overflow-y: hidden;
 }
-.recommand .pics > ul > li:not(:last-child) {
+.Recommand:not(:last-child) {
     margin-right: 3%;
 }
-.recommand .pics > ul > li > ul li:first-child {
+.Recommand ul li:first-child {
     height: 280px;
     margin-bottom: 25px;
 }
-.recommand .pics > ul > li > ul li:first-child img {
+.Recommand ul li:first-child img {
     width: 100%;
     height: 100%;
     border-radius: 25px;
@@ -64,6 +23,6 @@
     text-decoration: none;
     transition: 0.3s;
 }
-.mo_li:hover .li_un{
+.Recommand:hover .li_un{
     text-decoration: underline;
 }

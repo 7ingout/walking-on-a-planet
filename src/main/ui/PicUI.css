@@ -1,8 +1,8 @@
-.gallery {
+.PicUI {
     height: 600px;
     background-color: var(--main-color);
 }
-.gallery .gallery_h {
+.PicUI  .gallery_h {
     margin-top: 90px;
     width: 100%;
     max-width: 1500px;
@@ -14,10 +14,10 @@
     color: white;
     font-weight: bold;
 }
-.gallery .gallery_h h1 {
+.PicUI  .gallery_h h1 {
     font-size: 36px;
 }
-.gallery .gallery_h li:last-child {
+.PicUI .gallery_h li:last-child {
     letter-spacing: 3px;;
 }
 .swiper-slide img {
@@ -28,7 +28,7 @@
     filter: brightness(55%);
     transition: 0.2s;
 }
-.gallery .ti {
+.PicUI .ti {
     position: absolute;
     bottom: 0;
     color: white;
@@ -36,22 +36,6 @@
     padding-bottom: 10px;
     font-size: 20px;
  }
-.im1:hover  {
+.pic_img:hover  {
     filter: brightness(70%);
 }
-.im2:hover  {
-    filter: brightness(70%);
-}
-.im3:hover  {
-    filter: brightness(70%);
-}
-.im4:hover  {
-    filter: brightness(70%);
-}
-.im5:hover  {
-    filter: brightness(70%);
-}
-.im6:hover  {
-    filter: brightness(70%);
-}
-

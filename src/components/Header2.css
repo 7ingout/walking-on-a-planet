@@ -129,7 +129,8 @@
 .header2 .menu_box {
     display: flex;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .header2 .menu_box li:not(:first-child){
-    margin-left: 35px;
+    margin-left: 20px;
 }

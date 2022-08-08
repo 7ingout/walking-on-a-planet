@@ -1,0 +1,64 @@
+.destination .des_header {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.destination .des_bg img {
+    width: 100%;
+    filter: brightness(80%);
+}
+.destination .des_header h1 {
+    position: absolute;
+    bottom: 50px;    
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+}
+.destination .des_header div {
+    position: absolute;
+    bottom: 20px;    
+    color: white;
+    font-size: 14px;
+    width: 280px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.destination .des_box {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.destination .des_box .des_search {
+    height: 180px;
+}
+.destination .des_box input {
+    width: 1000px;
+    height: 50px;
+    margin-top: 80px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+    color:  var(--main-color);
+}
+.destination .des_box input:focus {
+    outline: 1px solid var(--main-color);
+    color:  var(--main-color);
+}
+.destination .des_box .des_search {
+    position: relative;
+}
+.destination .des_box .des_search img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 63px;
+    right: 610px
+}
+.destination ul {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}

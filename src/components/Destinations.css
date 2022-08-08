@@ -1,0 +1,29 @@
+.des_li {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    margin-bottom: 160px;
+}
+.des_li:not(:nth-child(3n)) {
+    margin-right: 2%;
+}
+.des_li img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+.des_li .small_char {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+.des_li .big_char {
+    font-weight: bold;
+    font-size: 24px;
+}
+.des_li:hover .big_char{
+    text-decoration: underline;
+}

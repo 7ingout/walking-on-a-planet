@@ -53,10 +53,11 @@ const Header = () => {
             </h1>
             <ul className='menu_box'>
                 <li>event</li>
+                <li><Link to = "/destinations">destinations</Link></li>
                 <li>shop</li>
                 { isLogin &&
                     <>
-                        <li>welcome {uname}</li>
+                        <li>{uname}</li>
                         <li onClick={logoutClick}>logout</li>
                         {/* <li><Link to="/">회원정보수정</Link></li> */}
                     </>
