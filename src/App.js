@@ -9,8 +9,10 @@ import { getCookie } from './util/cookie';
 import { useEffect } from 'react';
 import { setLogin } from './modules/logincheck';
 import DestinationsContainer from './components/DestinationsContainer';
+import AddTrip from './components/AddTrip';
+import EditTrip from './components/EditTrip';
 import EventContainer from './components/EventContainer';
-// import DetailTrip from './components/DetailTrip';
+import DetailTrip from './components/DetailTrip';
 
 function App() {
   const dispatch = useDispatch();
@@ -28,8 +30,11 @@ function App() {
           <Route path="/join" element={<JoinForm/>}/>
           <Route path="/login" element={<LoginForm/>}/>
           <Route path="/destinations" element={<DestinationsContainer />}/>
-          {/* <Route path="/detailview/:id" element={<DetailTrip/>}/> */}
+          <Route path="/trips/:cityNational" element={<DetailTrip/>}/>
           <Route path="/event" element={<EventContainer/>}/>
+          <Route path="/addTrip" element = {<AddTrip/>}/>
+          <Route path="/editTrip" element = {<EditTrip/>}/>
+          <Route path="/deleteTrip" element = {<AddTrip/>}/>
         </Routes>
       <Footer />
     </div>

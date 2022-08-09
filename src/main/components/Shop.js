@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Shop.css'
 
 const Shop = () => {
@@ -21,7 +22,7 @@ const Shop = () => {
                     </ul>
                 </li>  
                 <li className='btn'>
-                    Sign Up
+                    <Link to='/join'>Sign Up</Link>
                 </li> 
             </ul>
         </div>

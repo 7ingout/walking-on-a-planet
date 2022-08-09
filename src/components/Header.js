@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLogout } from '../modules/logincheck';
@@ -6,18 +6,17 @@ import { getCookie, removeCookie } from '../util/cookie';
 import './Header.css'
 
 const Header = () => {
-    const uname = getCookie('userName');
+    const userId = getCookie('userId');
     const isLogin = useSelector(state=>state.logincheck.isLogin);
     const dispatch = useDispatch();
     const logoutClick = () => {
         removeCookie('userName');
         removeCookie('userId');
         dispatch(setLogout());
+        window.location.reload();
+        alert('로그아웃되었습니다.')
     }
-    useEffect(()=>{
-        // setLogin(true);
-    },[isLogin]);
- 
+    console.log(isLogin);
     const openSearch = () => {
         const search = document.querySelector('.search_div');
         search.style.display = 'flex';
@@ -57,7 +56,7 @@ const Header = () => {
                 <li>shop</li>
                 { isLogin &&
                     <>
-                        <li>{uname}</li>
+                        <li>{userId}</li>
                         <li onClick={logoutClick}>logout</li>
                         {/* <li><Link to="/">회원정보수정</Link></li> */}
                     </>

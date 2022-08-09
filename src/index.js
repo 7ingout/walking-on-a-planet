@@ -9,6 +9,7 @@ import { CookiesProvider } from 'react-cookie';
 import { applyMiddleware, legacy_createStore as createStore } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './modules';
+import ScrollToTop from './ScrollToTop';
 // import "swiper/css/bundle";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
@@ -16,11 +17,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
-        <CookiesProvider>
-          <App />
-        </CookiesProvider>
-      </Provider>
+      <ScrollToTop />
+        <Provider store={store}>
+          <CookiesProvider>
+            <App />
+          </CookiesProvider>
+        </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

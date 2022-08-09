@@ -6,13 +6,15 @@ import { getCookie, removeCookie } from '../util/cookie';
 import './Header2.css'
 
 const Header2 = () => {
-    const uname = getCookie('userName');
+    const userId = getCookie('userId');
     const isLogin = useSelector(state=>state.logincheck.isLogin);
     const dispatch = useDispatch();
     const logoutClick = () => {
         removeCookie('userName');
         removeCookie('userId');
         dispatch(setLogout());
+        window.location.reload();
+        alert('로그아웃되었습니다.')
     }
     useEffect(()=>{
         // setLogin(true);
@@ -57,7 +59,7 @@ const Header2 = () => {
                 <li>shop</li>
                 { isLogin &&
                     <>
-                        <li>{uname}</li>
+                        <li>{userId}</li>
                         <li onClick={logoutClick}>logout</li>
                         {/* <li><Link to="/">회원정보수정</Link></li> */}
                     </>

@@ -1,7 +1,5 @@
 .des_li {
     width: 32%;
-    display: flex;
-    flex-direction: column;
     height: 280px;
     margin-bottom: 160px;
 }

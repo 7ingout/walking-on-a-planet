@@ -27,21 +27,21 @@ const Footer = () => {
                 <li>
                     <ul>
                         <li className='bold'>TOP DESTINATIONS</li>
-                        <li>New York City</li>
-                        <li>Paris</li>
-                        <li>Italy</li>
-                        <li>Japan</li>
-                        <li>Chicago</li>
-                        <li>Amsterdan</li>
-                        <li>England</li>
-                        <li>Germany</li>
+                        <li><Link to='/trips/말라위'>Malawi</Link></li>
+                        <li><Link to='/trips/헝가리'>Hungary</Link></li>
+                        <li><Link to='/trips/헝가리'>Bolivia</Link></li>
+                        <li><Link to='/trips/이탈리아'>Italy</Link></li>
+                        <li><Link to='/trips/오스트리아'>Austria</Link></li>
+                        <li><Link to='/trips/독일'>Germany</Link></li>
+                        <li><Link to='/trips/브라질'>Brazil</Link></li>
+                        <li><Link to='/trips/몽골'>Mongolia</Link></li>
                     </ul>
                 </li>
                 <li>
                     <ul>
                         <li className='bold'>TRAVEL STORY</li>
                         <li>our story</li>
-                        <li>landscape photography</li>
+                        <li>tip</li>
                     </ul>
                 </li>
                 <li>

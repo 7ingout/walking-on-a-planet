@@ -1,3 +1,6 @@
+.destination {
+    border-bottom: 1px solid #eee;
+}
 .destination .des_header {
     position: relative;
     width: 100%;
@@ -10,24 +13,26 @@
 }
 .destination .des_header h1 {
     position: absolute;
-    bottom: 54px;    
+    bottom: 60px;    
     color: white;
     font-size: 48px;
     font-weight: bolder;
 }
 .destination .des_header div {
     position: absolute;
-    bottom: 22px;    
+    bottom: 24px;    
     color: white;
     font-size: 14px;
-    width: 280px;
+    width: 281px;
     height: 20px;
+    padding-left:5px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 .destination .des_box {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+    position: relative;
 }
 .destination .des_box .des_search {
     height: 180px;
@@ -61,4 +66,23 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+}
+.addTrip {
+    position: absolute;
+    top: 92px;
+    right: 0;
+    width: 220px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.addTrip:hover {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
 }

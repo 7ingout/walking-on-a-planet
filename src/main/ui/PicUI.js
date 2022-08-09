@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper";
+import { Link } from 'react-router-dom';
 
 const PicUI = ( {pics} ) => {
     return (
@@ -28,8 +29,10 @@ const PicUI = ( {pics} ) => {
              autoplay={{delay: 5000}}>
                 {pics.map(pic=> (
                     <SwiperSlide key = {pic.no}>
-                        <img className='pic_img' src={pic.cityImg} alt='cityImg' />
-                        <div className='ti'>{pic.cityDesc}</div>
+                        <Link to={`/trips/${pic.cityNational}`}>
+                            <img className='pic_img' src={pic.cityImg} alt='cityImg' />
+                            <div className='ti'>{pic.cityDesc}</div>
+                        </Link>
                     </SwiperSlide>
                 ))}    
 

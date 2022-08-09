@@ -1,0 +1,70 @@
+.detialTrip {
+    border-bottom: 1px solid #eee;
+}
+.detialTrip .detailBg {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.detialTrip .detailBg img {
+    margin-top: -200px;
+    width: 100%;
+    filter: brightness(90%);
+}
+.detialTrip .detail_box {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.detialTrip .detail_box .detail_h {
+    margin-top: 70px;
+    position: relative;
+}
+.detialTrip .detail_box .detail_h div div:first-child {
+    font-weight: bold;
+}
+.detialTrip .detail_box .detail_h h1 {
+    font-size: 72px;
+    margin-top: 30px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.detialTrip .detail_box .cityDesc {
+    margin-top: 40px;
+    font-size: 28px;
+}
+.detialTrip .detail_box .detail_d h3{
+    margin: 40px 0;
+}
+.detialTrip .detail_box .cityMap {
+    margin: 100px 0; 
+}
+.editdelete {
+    display: flex;
+    position: absolute;
+    top: 92px;
+    right: 0;
+}
+.editdelete div {
+    width: 160px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+    margin-left: 10px;
+}
+.editdelete div:hover {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+}
+.cityMap {
+    max-width: 1200px;
+}
+.cityMap  img {
+    width: 100%;
+}

@@ -4,8 +4,7 @@ import visuals from './visuals';
 import recommands from './recommands';
 import pics from './pics';
 import logincheck from "./logincheck";
-import trips from "./trips"
+import trip from "./trip"
 
-
-const rootReducer = combineReducers({ visuals, recommands, pics, trips, logincheck });
+const rootReducer = combineReducers({ visuals, recommands, pics, trip, logincheck });
 export default rootReducer;
