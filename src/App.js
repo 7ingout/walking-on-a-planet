@@ -33,7 +33,7 @@ function App() {
           <Route path="/trips/:cityNational" element={<DetailTrip/>}/>
           <Route path="/event" element={<EventContainer/>}/>
           <Route path="/addTrip" element = {<AddTrip/>}/>
-          <Route path="/editTrip" element = {<EditTrip/>}/>
+          <Route path="/editTrip/:cityNational" element = {<EditTrip/>}/>
           <Route path="/deleteTrip" element = {<AddTrip/>}/>
         </Routes>
       <Footer />

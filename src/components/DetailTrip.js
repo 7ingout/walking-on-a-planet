@@ -34,7 +34,7 @@ const DetailTrip = () => {
                         <h1>{trip.cityNational}</h1>
                     </div>
                     <div className='editdelete'>
-                        { userId === 'admin' ? <Link to='/editTrip'><div className='tripDiv'>수정하기</div></Link> : ''}
+                        { userId === 'admin' ? <Link to={`/editTrip/${trip.cityNational}`}><div className='tripDiv'>수정하기</div></Link> : ''}
                         { userId === 'admin' ? <Link to='/deleteTrip'><div className='tripDiv'>삭제하기</div></Link> : ''}
                     </div>
                 </div>
