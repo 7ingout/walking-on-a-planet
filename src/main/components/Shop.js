@@ -12,7 +12,7 @@ const Shop = () => {
                 모두가 행복해질 수 있도록,<br/>
                 오늘도 Walking on a planet는 더 쉽고 안전한<br/>
                 개인간 거래를 만들어갑니다.</div>
-                <div>view all goods</div>
+                <div><Link to ='/usedtrade'>view all goods</Link></div>
             </div>
             <ul className='join_box'>
                 <li>

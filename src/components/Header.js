@@ -40,9 +40,9 @@ const Header = () => {
                     <div className='search_ul'>
                         <h3>Where to Next?</h3>
                         <ul>
-                            <li><span></span>뉴질랜드</li>
-                            <li><span></span>니카라과</li>
-                            <li><span></span>카리브제도</li>
+                            <li><Link to='/trips/뉴질랜드'><span></span>뉴질랜드</Link></li>
+                            <li><Link to='/trips/이탈리아'><span></span>이탈리아</Link></li>
+                            <li><Link to='/trips/카리브제도'><span></span>카리브제도</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const Header = () => {
             <ul className='menu_box'>
                 <li><Link to ='/event'>event</Link></li>
                 <li><Link to = "/destinations">destinations</Link></li>
-                <li>shop</li>
+                <li><Link to = '/usedtrade'>shop</Link></li>
                 { isLogin &&
                     <>
                         <li>{userId}</li>

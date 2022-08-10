@@ -1,0 +1,31 @@
+.trade_li {
+    width: 22%;
+    height: 320px;
+    margin-bottom: 160px;
+}
+.trade_li .goodsimg {
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+.trade_li:not(:nth-child(3n)) {
+    margin-right: 17%;
+}
+.trade_li img {
+    width: 100%;
+    border-radius: 25px;
+}
+.trade_li .small_char {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+.trade_li .big_char {
+    font-weight: bold;
+    font-size: 24px;
+}
+.trade_li:hover .big_char{
+    text-decoration: underline;
+}

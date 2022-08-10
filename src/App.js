@@ -13,6 +13,12 @@ import AddTrip from './components/AddTrip';
 import EditTrip from './components/EditTrip';
 import EventContainer from './components/EventContainer';
 import DetailTrip from './components/DetailTrip';
+import UsedTradeContainer from './components/UsedTrade/UsedTradeContainer';
+import DetailGoods from './components/UsedTrade/DetailGoods';
+import AddGoods from './components/UsedTrade/AddGoods';
+import EditGoods from './components/UsedTrade/EditGoods';
+import MyPage from './components/MyPage';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +40,11 @@ function App() {
           <Route path="/event" element={<EventContainer/>}/>
           <Route path="/addTrip" element = {<AddTrip/>}/>
           <Route path="/editTrip/:cityNational" element = {<EditTrip/>}/>
-          <Route path="/deleteTrip" element = {<AddTrip/>}/>
+          <Route path="/usedtrade" element = {<UsedTradeContainer/>}/>
+          <Route path="/usedtrade/:no" element = {<DetailGoods/>}/>
+          <Route path="/addGoods" element = {<AddGoods/>}/>
+          <Route path="/editGoods/:no" element = {<EditGoods/>}/>
+          <Route path="/myPage/:userId" element = {<MyPage/>}/>
         </Routes>
       <Footer />
     </div>

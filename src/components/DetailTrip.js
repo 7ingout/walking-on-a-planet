@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import useAsync from '../customHook/useAsync';
 import { API_URL } from '../config/constant';
 import './DetailTrip.css'
@@ -17,7 +17,23 @@ const DetailTrip = () => {
     const { cityNational } = useParams();
     const [state] = useAsync(()=>getDetail(cityNational), [cityNational]);
     const { loading, data: trip, error} = state;
+    const navigate = useNavigate();
+    console.log(cityNational);
 
+    const onDelete = () => {
+        if(window.confirm("삭제하시겠습니까?")){
+            axios.delete(`${API_URL}/deleteTrip/${cityNational}`)
+            .then(result=>{
+                console.log("삭제되었습니다.");
+                navigate('/destinations'); // 리다이렉션 추가
+            })
+            .catch(e=>{
+                console.log(e);
+            })
+        } else{
+            alert("삭제가 취소되었습니다");
+        }
+    }
     if(loading) return <div>로딩중입니다...</div>
     if(error) return <div>에러가 발생했습니다.</div>
     if(!trip) return null;
@@ -35,7 +51,7 @@ const DetailTrip = () => {
                     </div>
                     <div className='editdelete'>
                         { userId === 'admin' ? <Link to={`/editTrip/${trip.cityNational}`}><div className='tripDiv'>수정하기</div></Link> : ''}
-                        { userId === 'admin' ? <Link to='/deleteTrip'><div className='tripDiv'>삭제하기</div></Link> : ''}
+                        { userId === 'admin' ? <div onClick={onDelete} className='tripDiv'>삭제하기</div> : ''}
                     </div>
                 </div>
                 <div className='detail_d'>

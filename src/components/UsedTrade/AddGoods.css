@@ -1,53 +1,50 @@
-.AddTrip {
+.AddGoods {
     border-bottom: 1px solid #eee;
 }
-.AddTrip .add_bg {
+.AddGoods .trade_bg {
     width: 100%;
-    height: 500px;
+    height: 580px;
     overflow: hidden;
 }
-.AddTrip .add_bg img{
+.AddGoods .trade_bg img {
     width: 100%;
-    margin-top: -350px;
-    transform: scaleX(-1);
+    filter: brightness(90%);
 }
-.AddTrip .add_header {
+.AddGoods .trade_header {
     position: relative;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
 }
-.AddTrip .add_header h1 {
+.AddGoods .trade_header h1 {
     position: absolute;
     bottom: 60px;    
     color: white;
     font-size: 48px;
     font-weight: bolder;
 }
-.AddTrip .add_header div {
+.AddGoods .trade_header div {
     position: absolute;
     bottom: 24px;    
-    color: white;
+    color: black;
     font-size: 14px;
-    width: 161px;
+    width: 90px;
     height: 20px;
     padding-left:5px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
 }
-#edit_header div {
-    width: 228px;
-}
-.AddTrip .addform {
+
+.AddGoods .addform {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
 }
-.AddTrip .add_table {
+.AddGoods .add_table {
     width: 100%;
     /* margin: 0 auto; */
     margin-top: 80px;
 }
-.AddTrip .add_table th {
+.AddGoods .add_table th {
     background-color: #f6f6f6;
     text-align: left;
     width: 30%;
@@ -55,13 +52,16 @@
     color: #555;
     padding-left: 40px;
 }
-.AddTrip .add_table tr {
+.AddGoods .add_table tr {
     border-bottom: 1px solid #eee;
 }
-.AddTrip .add_table td {
+.AddGoods .add_table td {
     padding-left: 40px;
 }
-.AddTrip .add_table tr:not(:first-child):not(:last-child) td input {
+.AddGoods .add_table tbody tr:first-child {
+    border-top:  1px solid #ddd;
+}
+.AddGoods .add_table tbody tr:not(:nth-child(2)) input {
     margin-right: 40px;
     height: 32px;
     width: 300px;
@@ -71,13 +71,7 @@
     font-size: 15px;
     color: #444;
 }
-.AddTrip .add_table tbody tr:first-child {
-    border-top:  1px solid #ddd;
-}
-.AddTrip .add_table tbody tr:first-child input {
-    border: none;
-}
-.AddTrip .form_btn {
+.AddGoods .form_btn {
     background-color: #333;
     border: none;
     color: #eee;
@@ -90,14 +84,14 @@
     cursor: pointer;
     transition: 0.3s;
 }
-.AddTrip .form_btn:hover {
+.AddGoods .form_btn:hover {
     background-color: #111;
 }
-.AddTrip  .btn_div {
+.AddGoods  .btn_div {
     width: 100%;
     text-align: center;
 }
-.AddTrip textarea {
+.AddGoods textarea {
     margin: 15px 0;
     resize: none;
     height: 200px;

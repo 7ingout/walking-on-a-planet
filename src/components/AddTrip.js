@@ -57,14 +57,29 @@ const AddTrip = () => {
         })
     }
     const onSubmit = (e) => {
-        e.preventDefault();
-        axios.post(`${API_URL}/addTrip`, formData)
-        .then(res=> {
-            alert('등록되었습니다.');
-            navigate(-1);
-        }).catch(e=> {
-            console.log(e);
-        })
+        if(window.confirm("등록하시겠습니까?")) {
+            e.preventDefault();
+            if(formData.cityContinent !== "" && formData.cityNational !=="" &&
+            formData.cityImg !=="" && formData.cityDesc !=="" &&
+            formData.cityDesc2 !=="" && formData.cityDesc3 !== "" &&
+            formData.cityMapImg !== "")
+             {
+                addTrip();
+             } else {
+                alert("모든 기입란에 기입해주세요.")
+             }
+        } else {
+            alert("등록이 취소되었습니다.")
+        }
+        function addTrip() {
+            axios.post(`${API_URL}/addTrip`, formData)
+            .then(res=> {
+                alert('등록되었습니다.');
+                navigate(-1);
+            }).catch(e=> {
+                console.log(e);
+            })
+        }
     }
     return (
         <div className='AddTrip'>

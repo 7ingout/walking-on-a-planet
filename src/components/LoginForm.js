@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../config/constant';
 import { setCookie } from '../util/cookie';
-import { goToHome, setLogin } from '../modules/logincheck';
+import { setLogin } from '../modules/logincheck';
 import { useDispatch } from 'react-redux';
 
 import './LoginForm.css'
@@ -53,7 +53,8 @@ const LoginForm = () => {
                     setCookie('userId', `${userId}`, {path: '/', expires});
                     setCookie('userName', `${userName}`, {path: '/', expires});
                     dispatch(setLogin());
-                    dispatch(goToHome(navigate));
+                    // dispatch(goToHome(navigate));
+                    navigate(-1);
                 } else {
                     alert('아이디와 비밀번호를 확인해주세요');
                 }

@@ -50,6 +50,40 @@ const EditTrip = () => {
     //         c_imgsrc: imgsrc
     //     })
     // }
+    const onChangeImg = (e) => {
+        const { name } = e.target;
+        const imgFormData = new FormData();
+        imgFormData.append(name, e.target.files[0]);
+        axios.post(`${API_URL}/upload`, imgFormData, {
+            Headers: {'content-type':'multipart/form-data'},
+        }).then(response=>{
+            // setUploadImg(response.data.imageUrl);
+            setFormData({
+                ...formData,
+                cityImg: response.data.cityImg
+            })
+        })
+        .catch(e=>{
+            console.log(e)
+        })
+    }
+    const onChangeImg2 = (e) => {
+        const { name } = e.target;
+        const imgFormData = new FormData();
+        imgFormData.append(name, e.target.files[0]);
+        axios.post(`${API_URL}/upload2`, imgFormData, {
+            Headers: {'content-type':'multipart/form-data'},
+        }).then(response=>{
+            // setUploadImg(response.data.imageUrl);
+            setFormData({
+                ...formData,
+                cityMapImg: response.data.cityMapImg
+            })
+        })
+        .catch(e=>{
+            console.log(e)
+        })
+    }
     const onSubmit = (e) => {
         if(window.confirm("수정하시겠습니까?")){
             // form에 원래 연결된 이벤트를 제거
@@ -102,7 +136,7 @@ const EditTrip = () => {
                                        
                                     </div>
                                 </div>
-                                <input type="file" id='editInput' className='imgInput' name="cityImg" />
+                                <input type="file" id='editInput' className='imgInput' name="cityImg" onChange={onChangeImg}/>
                                     {
                                         formData.cityImg && <img src={`${API_URL}/upload/${formData.cityImg}`} alt="" className='imgview'/>
                                 }
@@ -161,7 +195,7 @@ const EditTrip = () => {
                                             
                                         </div>
                                     </div>
-                                    <input type="file" id='editInput' className='imgInput' name="cityMapImg" />
+                                    <input type="file" id='editInput' className='imgInput' name="cityMapImg" onChange={onChangeImg2}/>
                                     {
                                         formData.cityMapImg && <img src={`${API_URL}/upload2/${formData.cityMapImg}`} alt="" className='imgview'/>
                                     }
