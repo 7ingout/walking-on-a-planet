@@ -7,7 +7,6 @@ import Shop from './components/Shop';
 import PicContainer from './container/PicContainer';
 import Header from '../components/Header';
 
-
 const Index = ( {trips} ) => {
     // Indi
     // Indi Style

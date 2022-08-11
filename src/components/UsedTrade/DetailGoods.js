@@ -6,6 +6,7 @@ import useAsync from '../../customHook/useAsync';
 import { API_URL } from '../../config/constant';
 import './DetailGoods.css'
 import { getCookie } from '../../util/cookie';
+// import { useResultContext } from '../../context/context';
 
 async function getDetail(no) {
     const response = await axios.get(`${API_URL}/usedtrade/${no}`);
@@ -15,14 +16,15 @@ async function getDetail(no) {
 const DetailGoods = () => {
     const userId = getCookie('userId');
     const { no } = useParams();
-
+    
     const navigate = useNavigate();
     const [ cartData, setCartData ] = useState({
         userId: userId,
         productName: "",
         productImg: "",
         productPrice: "",
-        productSeller: ""
+        productSeller: "",
+        reserve: ""
     })
     const [state] = useAsync(()=>getDetail(no), [no]);
     const { loading, data: good, error} = state;
@@ -32,7 +34,8 @@ const DetailGoods = () => {
             productName: good? good.productName : "",
             productImg: good? good.productImg : "",
             productPrice: good? good.productPrice : "",
-            productSeller: good? good.productSeller : ""
+            productSeller: good? good.productSeller : "",
+            reserve: good? good.reserve : ""
         })
           //eslint-disable-next-line
     },[good])
@@ -59,9 +62,18 @@ const DetailGoods = () => {
             .catch(e=>{
                 console.log(e);
             })
-            // if(window.confirm ("장바구니에 담겼습니다. 마이페이지로 이동하시겠습니까?")) {
-            //     navigate(`/myPage/${userId}`);
-            // }
+            axios.put(`${API_URL}/cart/${no}`)
+            .then((result)=>{
+                console.log(result);
+            })
+            .catch(e=>{
+                console.log(e);
+            })
+            if(window.confirm ("장바구니에 담겼습니다. 마이페이지로 이동하시겠습니까?")) {
+                navigate(`/myPage/${userId}`);
+            } else {
+                
+            }
         } 
          else {
             if(userId) alert("취소되었습니다.");
@@ -92,6 +104,7 @@ const DetailGoods = () => {
                             <img src = {`${API_URL}/upload/${good.productImg}`} alt="img" />
                         </div>
                         <div>{good.productPrice}원</div>
+                        <div className='how_many'><span>장바구니에 담아놓은 사람 수</span>{good.reserve}명</div>
                         <div className='goodsDesc'>{good.productDesc}</div>
                     </div>
                 </div>

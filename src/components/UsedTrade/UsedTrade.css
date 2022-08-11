@@ -29,3 +29,6 @@
 .trade_li:hover .big_char{
     text-decoration: underline;
 }
+.how_many span {
+    margin-right: 10px;
+}

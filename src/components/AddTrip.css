@@ -154,3 +154,29 @@
 #noInput {
     background-color: #eee;
 }
+.createMap {
+    width: 180px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+    margin-left: 20px;
+}
+.createMap:hover {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+}
+.flextd {
+    display: flex;
+    align-items: center;
+}
+.exp {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 5px;
+}

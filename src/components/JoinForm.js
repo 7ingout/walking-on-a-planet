@@ -231,6 +231,7 @@ const JoinForm = () => {
                                     <input name="userMail" type="text" 
                                      value={formData.userMail}
                                      onChange={onChange}
+                                     placeholder='aaa@email.com 형식으로 입력'
                                     />
                                 </td>
                             </tr>

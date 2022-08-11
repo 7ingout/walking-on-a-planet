@@ -1,0 +1,55 @@
+.cartUI {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.cartUI h1 {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+.cartUI .cart_table {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+.cartUI .cart_table th {
+    padding-bottom: 20px;
+}
+.total td {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.total td span {
+    padding-right: 40px;
+}
+.buy_tr td {
+    width: 100%;
+    text-align: right;
+}
+.buy {
+    float: right;
+    text-align: center;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-bottom: 120px;
+}
+.buy:hover {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+}
+.noCart {
+    margin-bottom: 120px;
+}

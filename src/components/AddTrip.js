@@ -152,7 +152,7 @@ const AddTrip = () => {
                         </tr>
                         <tr>
                             <th>지도</th>
-                            <td>
+                            <td className='flextd'>
                             <div className='imgDiv'>
                                     <div className='imgBox'>
                                         <div className='addimg'>
@@ -164,12 +164,16 @@ const AddTrip = () => {
                                         formData.cityMapImg && <img src={`${API_URL}/upload2/${formData.cityMapImg}`} alt="" className='imgview'/>
                                     }
                             </div>
+                            <div>
+                                <a href='https://www.amcharts.com/visited_countries/' target="_blank" rel='noreferrer'><div className='createMap'>지도 구하러가기</div></a>
+                                <div className='exp'>* 바다색은 #DEF2FD 국가색은 #0057d9 사용</div>
+                            </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div className='btn_div'>
-                        <button className='form_btn' type="submit">등록하기</button>
+                    <button className='form_btn' type="submit">등록하기</button>
                 </div>
             </form>
         </div>

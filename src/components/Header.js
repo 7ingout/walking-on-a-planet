@@ -56,7 +56,7 @@ const Header = () => {
                 <li><Link to = '/usedtrade'>shop</Link></li>
                 { isLogin &&
                     <>
-                        <li>{userId}</li>
+                        <li><Link to = {`/myPage/${userId}`}>{userId}</Link></li>
                         <li onClick={logoutClick}>logout</li>
                         {/* <li><Link to="/">회원정보수정</Link></li> */}
                     </>

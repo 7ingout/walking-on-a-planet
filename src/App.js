@@ -11,13 +11,14 @@ import { setLogin } from './modules/logincheck';
 import DestinationsContainer from './components/DestinationsContainer';
 import AddTrip from './components/AddTrip';
 import EditTrip from './components/EditTrip';
-import EventContainer from './components/EventContainer';
 import DetailTrip from './components/DetailTrip';
 import UsedTradeContainer from './components/UsedTrade/UsedTradeContainer';
 import DetailGoods from './components/UsedTrade/DetailGoods';
 import AddGoods from './components/UsedTrade/AddGoods';
 import EditGoods from './components/UsedTrade/EditGoods';
-import MyPage from './components/MyPage';
+import MyPage from './components/MyPage/MyPage';
+import { ResultContextProvider } from './context/context';
+import EventContainer from './components/Event/EventConatainer/EventContainer';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
   },[])
   return (
     <div className="App">
+      <ResultContextProvider>
         <Routes>
           <Route path="/" element={<Index/>}/>
           <Route path="/join" element={<JoinForm/>}/>
@@ -47,6 +49,7 @@ function App() {
           <Route path="/myPage/:userId" element = {<MyPage/>}/>
         </Routes>
       <Footer />
+      </ResultContextProvider>
     </div>
   );
 }
