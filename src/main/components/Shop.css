@@ -63,6 +63,7 @@
     border-radius: 25px;
     text-align: center;
     transition: 0.2s;
+    cursor: pointer;
 }
 .btn:hover {
     filter: brightness(150%);

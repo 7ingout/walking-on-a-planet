@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { setLogout } from '../modules/logincheck';
 import { getCookie, removeCookie } from '../util/cookie';
 import './Header2.css'
 
 const Header2 = () => {
+    const Navigate = useNavigate();
     const userId = getCookie('userId');
     const isLogin = useSelector(state=>state.logincheck.isLogin);
     const dispatch = useDispatch();
@@ -13,7 +14,8 @@ const Header2 = () => {
         removeCookie('userName');
         removeCookie('userId');
         dispatch(setLogout());
-        window.location.reload();
+        // window.location.reload();
+        Navigate('/');
         alert('로그아웃되었습니다.')
     }
     useEffect(()=>{
@@ -56,10 +58,10 @@ const Header2 = () => {
             <ul className='menu_box'>
                 <li><Link to ='/event'>event</Link></li>
                 <li><Link to='/destinations'>destinations</Link></li>
-                <li>shop</li>
+                <li><Link to = '/usedtrade'>shop</Link></li>
                 { isLogin &&
                     <>
-                        <li>{userId}</li>
+                        <li><Link to = {`/myPage/${userId}`}>{userId}</Link></li>
                         <li onClick={logoutClick}>logout</li>
                         {/* <li><Link to="/">회원정보수정</Link></li> */}
                     </>

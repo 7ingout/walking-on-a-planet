@@ -103,37 +103,37 @@
     color: #444;
     padding-top: 10px;
 }
-.AddGoods .imgDiv {
+#AddEvent  .imgDiv {
     margin: 15px 0;
     position: relative;
 }
-.AddGoods .imgBox {
-    width: 300px;
+#AddEvent .imgBox {
+    width: 500px;
     height: 300px;
     /* background-color: darkseagreen; */
     border: 1px solid #ccc;
     position: relative;
 }
-.AddGoods .imgBox .addimg {
+#AddEvent  .imgBox .addimg {
     position: absolute;
     width: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.AddGoods .imgBox .addimg img {
+#AddEvent  .imgBox .addimg img {
     width: 100%;
 }
-.AddGoods .imgInput {
+#AddEvent  .imgInput {
     position: absolute;
-    width: 300px;
+    width: 500px;
     height: 300px;
     left: 0;
     top: 0;
     opacity: 0;
 }
-.AddGoods .imgview {
-    width: 300px;
+#AddEvent .imgview {
+    width: 500px;
     height: 300px;
     position: absolute;
     left: 0;
@@ -147,4 +147,13 @@
 
 #noInput {
     background-color: #eee;
+}
+#EventH {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+#eventform {
+    margin-top: 0px;
 }

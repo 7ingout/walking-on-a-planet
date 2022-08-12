@@ -1,8 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import './Shop.css'
 
 const Shop = () => {
+    const isLogin = useSelector(state=>state.logincheck.isLogin);
+    const Navigate = useNavigate();
+    const goJoin = () => {
+        if(isLogin) {
+            alert("이미 로그인이 되어있습니다.")
+        } else {
+            Navigate('/join');
+        }
+    }
     return (
         <div className='shop'>
             <div className='shop_p'>
@@ -22,7 +32,7 @@ const Shop = () => {
                     </ul>
                 </li>  
                 <li className='btn'>
-                    <Link to='/join'>Sign Up</Link>
+                    <div onClick={goJoin}>Sign Up</div>
                 </li> 
             </ul>
         </div>

@@ -1,0 +1,49 @@
+.DetailEvent {
+    border-bottom: 1px solid #eee;
+}
+.DetailEvent .detail_d {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.DetailEvent .detail_d .imgbox {
+    width: 100%;
+}
+.DetailEvent .detail_d .imgbox img {
+    width: 100%;
+    margin-top: 20px;
+}
+.DetailEvent .detail_d  h4 {
+    margin-top: 40px;
+}
+.DetailEvent .detail_d .Desc {
+    margin-top: 10px;
+    margin-bottom: 120px;
+}
+.DetailEvent .detail_d .detailh{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  
+}
+.DetailEvent .detail_d .btns {
+    display: flex;
+    align-items: center;
+}
+.DetailEvent .detail_d .btns .imgd {
+    width: 50px;
+}
+.DetailEvent .detail_d .btns div:nth-child(2) {
+    margin-left: 10px;
+}
+.DetailEvent .detail_d .btns div:nth-child(2) span {
+    margin-left: 5px;
+}
+.DetailEvent .detail_d .btns div img {
+    width: 100%;
+    cursor: pointer;
+}
+.goRight {
+    cursor: pointer;
+}

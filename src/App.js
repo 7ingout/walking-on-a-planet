@@ -19,6 +19,8 @@ import EditGoods from './components/UsedTrade/EditGoods';
 import MyPage from './components/MyPage/MyPage';
 import { ResultContextProvider } from './context/context';
 import EventContainer from './components/Event/EventConatainer/EventContainer';
+import DetailEvent from './components/Event/DetailEvent';
+import AddEvent from './components/Event/AddEvent';
 
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
           <Route path="/destinations" element={<DestinationsContainer />}/>
           <Route path="/trips/:cityNational" element={<DetailTrip/>}/>
           <Route path="/event" element={<EventContainer/>}/>
+          <Route path="/event/:userId" element={<DetailEvent/>}/>
           <Route path="/addTrip" element = {<AddTrip/>}/>
           <Route path="/editTrip/:cityNational" element = {<EditTrip/>}/>
           <Route path="/usedtrade" element = {<UsedTradeContainer/>}/>
@@ -47,6 +50,7 @@ function App() {
           <Route path="/addGoods" element = {<AddGoods/>}/>
           <Route path="/editGoods/:no" element = {<EditGoods/>}/>
           <Route path="/myPage/:userId" element = {<MyPage/>}/>
+          <Route path="/addEvent" element = {<AddEvent/>}/>
         </Routes>
       <Footer />
       </ResultContextProvider>

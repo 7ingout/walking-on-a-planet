@@ -33,18 +33,48 @@
     width: 700px;
 }
 .EventUI ul {
-    padding-top: 130px;
+    padding-top: 20px;
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 130px;
+    align-items: center;
 }
-.good {
+.goodd {
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
     color: black;
     padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.addPics {
+    cursor: pointer;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.addPics:hover {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+}
+.inform {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-top: -5px;
+}
+.inform div:nth-child(2){
+    margin-top: 80px;
 }

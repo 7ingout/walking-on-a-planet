@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { setLogout } from '../modules/logincheck';
 import { getCookie, removeCookie } from '../util/cookie';
 import './Header.css'
 
 const Header = () => {
+    const Navigate = useNavigate();
     const userId = getCookie('userId');
     const isLogin = useSelector(state=>state.logincheck.isLogin);
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Header = () => {
         removeCookie('userName');
         removeCookie('userId');
         dispatch(setLogout());
-        window.location.reload();
+        Navigate('/');
         alert('로그아웃되었습니다.')
     }
     console.log(isLogin);

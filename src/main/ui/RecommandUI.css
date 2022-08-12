@@ -23,6 +23,7 @@
     border-radius: 25px;
     font-weight: bold;
     transition: 0.2s;
+    cursor: pointer;
 }
 .RecoomandUI .recommand_h div:last-child:hover {
     border: none;

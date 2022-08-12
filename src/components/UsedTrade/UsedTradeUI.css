@@ -50,6 +50,7 @@
     border-radius: 25px;
     font-weight: bold;
     transition: 0.2s;
+    cursor: pointer;
 }
 .addGoods:hover {
     border: none;
