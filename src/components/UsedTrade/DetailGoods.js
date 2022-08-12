@@ -55,6 +55,7 @@ const DetailGoods = () => {
     }
     function buyGoods(){
         if(window.confirm("장바구니에 담으시겠습니까?") && userId){
+            
             axios.post(`${API_URL}/cart`, cartData)
             .then((result)=>{
                 console.log(result);
