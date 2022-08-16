@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import Header from './Header';
+import Header from '../Header';
 import DestinationsUI from './DestinationsUI';
 import { useSelector, useDispatch } from 'react-redux';
-import { getTrip } from '../modules/trip';
+import { getTrip } from '../../modules/trip';
 
 const DestinationsContainer = () => {
     const { data, error, loading } = useSelector(state=>state.trip);

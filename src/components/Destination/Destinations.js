@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Destinations.css';
-import { API_URL } from '../config/constant.js';
+import { API_URL } from '../../config/constant.js';
 
 const Destinations = ( {trip} ) => {
-    console.log(trip.cityImg)
+    // console.log(trip.cityImg)
     return (
         <li className='des_li'>
             <Link to={`/trips/${trip.cityNational}`} >

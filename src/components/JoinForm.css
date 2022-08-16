@@ -163,3 +163,7 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+.join h1 span {
+    font-size: 14px;
+    font-weight: normal;
+}

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import Header from './Header';
+import Header from '../Header';
 import './AddTrip.css'
 import axios from "axios";
-import { API_URL } from '../config/constant';
+import { API_URL } from '../../config/constant';
 import { useNavigate } from 'react-router-dom';
 
 const AddTrip = () => {
-    
     const navigate = useNavigate()
     const [ formData, setformData ] = useState({
         cityImg:"",

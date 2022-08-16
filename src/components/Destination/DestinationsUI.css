@@ -53,12 +53,18 @@
 .destination .des_box .des_search {
     position: relative;
 }
+.destination .des_box .des_search  button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
 .destination .des_box .des_search img {
     position: absolute;
     width: 25px;
     height: 25px;
     bottom: 63px;
-    right: 610px
+    right: 610px;
+    cursor: pointer;
 }
 .destination ul {
     width: 100%;
@@ -85,4 +91,12 @@
     border: none;
     color: white;
     background-color: var(--main-color);
+}
+#alldes {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    display: block;
+    color: var(--main-color);
 }

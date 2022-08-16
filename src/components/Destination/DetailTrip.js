@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../Header';
 import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import useAsync from '../customHook/useAsync';
-import { API_URL } from '../config/constant';
+import useAsync from '../../customHook/useAsync';
+import { API_URL } from '../../config/constant';
 import './DetailTrip.css'
-import { getCookie } from '../util/cookie';
+import { getCookie } from '../../util/cookie';
 
 async function getDetail(cityNational) {
     const response = await axios.get(`${API_URL}/destinations/${cityNational}`);

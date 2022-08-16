@@ -19,7 +19,7 @@ const Footer = () => {
                             <li><img src='/icon/line.png' alt='line'/></li>
                         </ul>
                         <div>SUBSCRIBE</div>
-                        <div>20% 할인 쿠폰 받기</div>
+                        <div>영감을 줄 여행지 찾아보기</div>
                         <div><Link to='/join'>Sign Up</Link></div>
                         <div>Subscribe to Walking On a Planet newsletters and promotions. Read our Privacy Policy.</div>
                     </div>
@@ -40,14 +40,14 @@ const Footer = () => {
                 <li>
                     <ul>
                         <li className='bold'>TRAVEL STORY</li>
-                        <li>our story</li>
-                        <li>tip</li>
+                        <li><Link to='/event'>event</Link></li>
+                        {/* <li>tip</li> */}
                     </ul>
                 </li>
                 <li>
                     <ul>
                         <li className='bold'>SHOP</li>
-                        <li>used trade</li>
+                        <li><Link to='/usedtrade'>used trade</Link></li>
                         <li id='la_li' className='bold'>ABOUT US</li>
                         <li className='lala_li'>About Walking On a Planet</li>
                     </ul>

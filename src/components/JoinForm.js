@@ -8,6 +8,7 @@ import PopupDom from "./PopupDom"
 import PopupPostCode from "./PopupPostCode"
 
 const JoinForm = () => {
+
     const navigate = useNavigate(); // 리다이렉션
     const [ formData, setFormData ] = useState({
         userId: "",
@@ -50,6 +51,21 @@ const JoinForm = () => {
     const closePostCode = () => {
         setIsPopupOpen(false);
     }
+    const [mailCk, setMailCk] = useState(false);
+    const emailCk = (e) =>  {
+        const text = document.querySelector('#email');
+        const mailInform = document.querySelector('#mailCkMessage');
+        //eslint-disable-next-line
+        var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+        mailInform.style.color = 'crimson';
+        if (regEmail.test(text.value) === true) {
+            mailInform.innerHTML = '';
+            setMailCk(true);
+        }else {
+            mailInform.innerHTML = '이메일 형식이 아닙니다.';
+            setMailCk(false);
+        }
+    }
     const OnPwCh = () => {
         const userPw = document.querySelector('#pass');
         const userPwCh = document.querySelector('#passCk');
@@ -63,6 +79,7 @@ const JoinForm = () => {
             }
         })
     }
+    const [ idCk, setidCk ] = useState(false);
     const OnIdCh = async (e) => {
         let userId = document.querySelector('#userId');
         const response = await axios.get(`${API_URL}/idCh`);
@@ -81,26 +98,74 @@ const JoinForm = () => {
             alert('중복아이디입니다.');
         } else {
             alert('사용가능한 아이디입니다.');
+            setidCk(true);
         }
     }
+    function phoneNumber(e) {
+        var { name, value } = e.target;
+        // if (!value) {
+        //   return "";
+        // }
+        value = value.replace(/[^0-9]/g, "");
+        let result = [];
+        let restNumber = "";
+
+        // 지역번호와 나머지 번호로 나누기
+        if (value.startsWith("02")) {
+          // 서울 02 지역번호
+          result.push(value.substr(0, 2));
+          restNumber = value.substring(2);
+        } else if (value.startsWith("1")) {
+          // 지역 번호가 없는 경우
+          // 1xxx-yyyy
+          restNumber = value;
+        } else {
+          // 나머지 3자리 지역번호
+          // 0xx-yyyy-zzzz
+          result.push(value.substr(0, 3));
+          restNumber = value.substring(3);
+        }
+     
+        if (restNumber.length === 7) {
+          // 7자리만 남았을 때는 xxx-yyyy
+          result.push(restNumber.substring(0, 3));
+          result.push(restNumber.substring(3));
+        } else {
+          result.push(restNumber.substring(0, 4));
+          result.push(restNumber.substring(4));
+        }
+        value = result.filter((val) => val).join("-");
+        setFormData({
+            ...formData,
+            [name]:value
+        })
+        return value;
+      }
      // 폼 submit 이벤트
      const onSubmit = (e) => {
         if(window.confirm("가입하시겠습니까?")){
             e.preventDefault();
-            if(isNaN(formData.userPhone)){
-                alert("전화번호는 숫자만 입력해주세요");
-                setFormData({
-                    ...formData,
-                    userPhone: ""
-                })
-            }
-            else if(formData.userId !== "" && formData.userPass !== "" &&
+            // if(isNaN(formData.userPhone)){
+            //     alert("전화번호는 숫자만 입력해주세요");
+            //     setFormData({
+            //         ...formData,
+            //         userPhone: ""
+            //     })
+            // }
+            if(formData.userId !== "" && formData.userPass !== "" &&
             formData.userName !== "" && formData.userPhone !== "" &&
             formData.userMail !== ""){
-                joinMember();
+                if(idCk && mailCk){
+                    joinMember();
+                } else if(!idCk) {
+                    alert('아이디 중복확인을 해주세요.')
+                } else if(!mailCk) {
+                    alert('이메일 형식을 확인해주세요')
+                }
             }
             else {
-                alert("모든 기입란에 기입해주세요");
+                // alert("모든 기입란에 기입해주세요");
+                alert("* 표시가 붙은 항목에 모두 기입주세요");
             }
         } else{
             alert("가입이 취소되었습니다");
@@ -116,6 +181,7 @@ const JoinForm = () => {
             console.log(e);
         })
     }
+
     return (
         <div>
             <Header2 />
@@ -131,7 +197,7 @@ const JoinForm = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <h1>기본정보</h1>
+                    <h1>기본정보<br/><span>* 표시가 붙은 항목은 필수기입란입니다.</span></h1>
                     <table className='join_table'>
                         <tbody>
                             <tr>
@@ -143,7 +209,7 @@ const JoinForm = () => {
                                     onChange={onChange}
                                     />
                                     <span type='text' id='doubleCk' className='white_btn' onClick={(e)=>{OnIdCh(e);}}>중복확인</span>
-                                    <span className='small_span'>(영문소문자/숫자, 4~16자)</span>
+                                    {/* <span className='small_span'>(영문소문자/숫자, 4~16자)</span> */}
                                 </td>
                             </tr>
                             <tr>
@@ -153,7 +219,7 @@ const JoinForm = () => {
                                     value={formData.userPass}
                                     onChange={onChange}
                                     />
-                                    <span className='small_span'>(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span>
+                                    {/* <span className='small_span'>(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span> */}
                                 </td>
                             </tr>
                             <tr>
@@ -210,9 +276,10 @@ const JoinForm = () => {
                                 <td>
                                     <input name="userTel" type="text" 
                                     value={formData.userTel}
-                                    onChange={onChange}
+                                    // onChange={onChange}
+                                    onChange={phoneNumber}
                                     />
-                                    <span className='small_span'>(공백/기호없이 입력, 10자~12자)</span>
+                                    <span className='small_span'>(숫자만 입력, 10자~12자)</span>
                                 </td>
                             </tr>
                             <tr>
@@ -220,9 +287,10 @@ const JoinForm = () => {
                                 <td>
                                     <input name="userPhone" type="text" 
                                      value={formData.userPhone}
-                                     onChange={onChange}
+                                    //  onChange={onChange}
+                                    onChange={phoneNumber}
                                     />
-                                    <span className='small_span'>(공백/기호없이 입력, 10자~12자)</span>
+                                    <span className='small_span'>(숫자만 입력, 10자~12자)</span>
                                 </td>
                             </tr>
                             <tr>
@@ -230,9 +298,11 @@ const JoinForm = () => {
                                 <td>
                                     <input name="userMail" type="text" 
                                      value={formData.userMail}
-                                     onChange={onChange}
+                                     onChange={(e)=>{onChange(e); emailCk(e);}}
+                                     id="email"
                                      placeholder='aaa@email.com 형식으로 입력'
                                     />
+                                     <span id='mailCkMessage' className='small_span'></span>
                                 </td>
                             </tr>
                         </tbody>

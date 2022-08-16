@@ -8,20 +8,20 @@ import { useDispatch } from 'react-redux';
 import { getCookie } from './util/cookie';
 import { useEffect } from 'react';
 import { setLogin } from './modules/logincheck';
-import DestinationsContainer from './components/DestinationsContainer';
-import AddTrip from './components/AddTrip';
-import EditTrip from './components/EditTrip';
-import DetailTrip from './components/DetailTrip';
+import DestinationsContainer from './components/Destination/DestinationsContainer';
+import AddTrip from './components/Destination/AddTrip';
+import DetailTrip from './components/Destination/DetailTrip';
+import EditTrip from './components/Destination/EditTrip';
 import UsedTradeContainer from './components/UsedTrade/UsedTradeContainer';
 import DetailGoods from './components/UsedTrade/DetailGoods';
 import AddGoods from './components/UsedTrade/AddGoods';
 import EditGoods from './components/UsedTrade/EditGoods';
 import MyPage from './components/MyPage/MyPage';
-import { ResultContextProvider } from './context/context';
 import EventContainer from './components/Event/EventConatainer/EventContainer';
 import DetailEvent from './components/Event/DetailEvent';
 import AddEvent from './components/Event/AddEvent';
-
+import SearchDestinaions from './components/Destination/SearchDestinaions';
+import MyTrade from './components/UsedTrade/MyTrade';
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +34,6 @@ function App() {
   },[])
   return (
     <div className="App">
-      <ResultContextProvider>
         <Routes>
           <Route path="/" element={<Index/>}/>
           <Route path="/join" element={<JoinForm/>}/>
@@ -51,9 +50,10 @@ function App() {
           <Route path="/editGoods/:no" element = {<EditGoods/>}/>
           <Route path="/myPage/:userId" element = {<MyPage/>}/>
           <Route path="/addEvent" element = {<AddEvent/>}/>
+          <Route path="/search/:searchInput" element = {<SearchDestinaions/>}/>
+          <Route path="/my/:userId" element = {<MyTrade/>}/>
         </Routes>
       <Footer />
-      </ResultContextProvider>
     </div>
   );
 }

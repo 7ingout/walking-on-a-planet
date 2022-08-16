@@ -55,26 +55,29 @@ const DetailGoods = () => {
     }
     function buyGoods(){
         if(window.confirm("장바구니에 담으시겠습니까?") && userId){
-            
             axios.post(`${API_URL}/cart`, cartData)
             .then((result)=>{
                 console.log(result);
-            })
-            .catch(e=>{
-                console.log(e);
-            })
-            axios.put(`${API_URL}/cart/${no}`)
-            .then((result)=>{
+                if(result.data === '있음') {
+                    alert('이미 담겨져있는 상품입니다')
+                    window.location.reload();
+                } else {
+                    axios.put(`${API_URL}/cart/${no}`)
+                    .then((result)=>{
+                        console.log(result);
+                    })
+                    .catch(e=>{
+                        console.log(e);
+                    })
+                    if(window.confirm ("장바구니에 담겼습니다. 마이페이지로 이동하시겠습니까?")) {
+                        navigate(`/myPage/${userId}`);
+                    } else {}
+                }
                 console.log(result);
             })
             .catch(e=>{
                 console.log(e);
             })
-            if(window.confirm ("장바구니에 담겼습니다. 마이페이지로 이동하시겠습니까?")) {
-                navigate(`/myPage/${userId}`);
-            } else {
-                
-            }
         } 
          else {
             if(userId) alert("취소되었습니다.");

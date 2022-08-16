@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { API_URL } from '../config/constant';
-import Header from './Header';
+import { API_URL } from '../../config/constant';
+import Header from '../Header';
 import './AddTrip.css'
 import { useParams, useNavigate } from 'react-router-dom';
-import useAsync from '../customHook/useAsync';
+import useAsync from '../../customHook/useAsync';
 
 const EditTrip = () => {
     const navigate = useNavigate(); // 리다이렉션

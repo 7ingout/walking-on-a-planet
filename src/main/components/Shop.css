@@ -3,6 +3,7 @@
     width: 100%;
     height: 1100px;
     position: relative;
+    margin-top: -4px;
 }
 .shop .shop_p {
     color: white;

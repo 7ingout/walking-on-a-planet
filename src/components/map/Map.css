@@ -1,0 +1,39 @@
+.bluebg {
+    background-color:lightskyblue;
+    background-color: lightsteelblue;
+    background-color: #4B6587;
+    /* background-color:; */
+}
+.bluebg h1 {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 120px;
+    color: white;
+}
+.bluebg .exp {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: -60px;
+    color: white;
+}
+.map {
+    width: 100%;
+    max-width: 2100px;
+    margin: 0 auto;
+    padding-right: 180px;
+    margin-bottom: -120px;
+}
+.ivorybg {
+    width: 100%;
+    height: 20px;
+    background-color: #C8C6C6;
+}
+.graybg {
+    width: 100%;
+    height: 30px;
+    background-color: #F0E5CF;
+}

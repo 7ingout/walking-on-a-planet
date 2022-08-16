@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './UsedTradeUI.css'
 import UsedTrade from './UsedTrade';
+import { getCookie } from '../../util/cookie';
 
 const UsedTradeUI = ( {goods} ) => {
+    const userId = getCookie('userId');
     const navigate = useNavigate();
     const isLogin = useSelector(state=>state.logincheck.isLogin);
     const goPage = () => {
@@ -15,6 +17,9 @@ const UsedTradeUI = ( {goods} ) => {
             alert("로그인 후 이용가능합니다.")
        }
     }
+    const goMy = () => {
+        navigate(`/my/${userId}`)
+    }
     return (
         <div className='usedTrade'>
             <div className='trade_bg'><img src='/bg.jpg' alt='trade' /></div>
@@ -23,6 +28,7 @@ const UsedTradeUI = ( {goods} ) => {
                 <div>Used Trade</div>
             </div>
             <div className='trade_box'>
+                { userId ? <div onClick={goMy} className='addGoods'>내가 내놓은 상품보기</div> : "" }
                 <div onClick={goPage} className='addGoods'>상품 판매하기</div>
             </div>
             <ul>

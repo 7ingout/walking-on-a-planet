@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { setLogout } from '../modules/logincheck';
@@ -26,6 +26,28 @@ const Header = () => {
         const search = document.querySelector('.search_div');
         search.style.display = 'none';
     }
+    const [ formData, setformData ] = useState({
+        searchInput:""
+    });
+    const onChange = (e) => {
+        const { name, value } = e.target;
+        setformData({
+            ...formData,
+            [name]: value
+        })
+    }
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if(formData.searchInput === "") {
+            alert("검색어를 입력해주세요.")
+        } else {
+            Navigate(`/search/${formData.searchInput}`, {
+                state: {
+                    search: `${formData.searchInput}`
+                }
+            })
+        }
+    }
     return (
         <div className='header'>
             <ul onClick={openSearch} className='search_box'>
@@ -34,10 +56,13 @@ const Header = () => {
             </ul>
             <div className='search_div'>
                 <div>
-                    <div className='small_search_div'>
-                        <input className='small_search' />
-                    </div>
-                    <span onClick={closeSearch} className='close_btn'>×</span>
+                    <form onSubmit={onSubmit} className='searchform'>
+                        <div className='small_search_div'>
+                            <input name="searchInput" type='text' value={formData.searchInput} onChange={onChange} className='small_search' />
+                        </div>
+                        <button type="submit"></button>
+                        <span onClick={closeSearch} className='close_btn'>×</span>
+                    </form>
                     <div className='search_ul'>
                         <h3>Where to Next?</h3>
                         <ul>
