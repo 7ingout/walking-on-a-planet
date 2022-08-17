@@ -114,8 +114,8 @@
 }
 .postCode_btn {
     position: absolute;
-    top: 82%;
-    left: 56.5%;
+    top: 55%;
+    left: 56.2%;
     width: 80px;
     height: 26px;
     line-height: 26px;
@@ -244,7 +244,7 @@
     }
     .postCode_btn {
         position: absolute;
-        top: 80%;
+        top: 45%;
         left: 50%;
         transform: translateX(-50%);
         width: 80px;
