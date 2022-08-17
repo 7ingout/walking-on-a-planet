@@ -55,6 +55,7 @@ const Footer = () => {
             </ul>
             <div className='inner_container'>
                 <div className='Footer_bottom'>© 2022 Walking on a planet. All rights reserved. No part of this site may be reproduced without our written permission.</div>
+                <div className='Footer_bottom2'>© 2022 Walking on a planet. All rights reserved.</div>
             </div>
         </div>
     );

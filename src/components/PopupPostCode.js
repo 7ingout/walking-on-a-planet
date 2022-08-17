@@ -30,7 +30,8 @@ const PopupPostCode = (props) => {
         top: '50%',
         left: '50%',
         transform:'translate(-50%,-50%)',
-        width: "600px",
+        width: "100%",
+        maxWidth: "400px",
         height: "600px",
         border: "1px solid #666"
       };

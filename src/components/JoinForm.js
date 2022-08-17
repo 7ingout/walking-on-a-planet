@@ -193,12 +193,12 @@ const JoinForm = () => {
                         <tbody>
                             <tr>
                                 <th>회원구분<span>*</span></th>
-                                <td><input type="radio" checked readOnly/>개인회원</td>
+                                <td><input type="radio" id='right' checked readOnly/>개인회원</td>
                             </tr>
                         </tbody>
                     </table>
                     <h1>기본정보<br/><span>* 표시가 붙은 항목은 필수기입란입니다.</span></h1>
-                    <table className='join_table'>
+                    <table id='join_table2' className='join_table'>
                         <tbody>
                             <tr>
                                 <th>아이디<span>*</span></th>
@@ -249,7 +249,7 @@ const JoinForm = () => {
                                     placeholder="우편번호"
                                     onChange={onChange}
                                     />
-                                    <button className='white_btn' type="button" onClick={openPostCode}>주소검색</button>
+                                    <button id='addbtn' className='white_btn' type="button" onClick={openPostCode}>주소검색</button>
                                     <input name="userAdd" type="text"
                                     value={formData.userAdd}
                                     placeholder="기본주소"

@@ -115,7 +115,7 @@
 .postCode_btn {
     position: absolute;
     top: 82%;
-    left: 61.5%;
+    left: 56.5%;
     width: 80px;
     height: 26px;
     line-height: 26px;
@@ -166,4 +166,123 @@
 .join h1 span {
     font-size: 14px;
     font-weight: normal;
+}
+@media all and (min-width:320px) and (max-width:479px) {
+    .join .joinform {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .join .joinform .small_menu {
+        margin-right: 10px;
+    }
+    .join .joinform h1 {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .join .joinform .join_table {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 340px;
+    }
+    .join .joinform #join_table2 {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 340px;
+    }
+    .join .joinform .join_table th {
+        width: 34%;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    #join_table2 tbody td {
+        max-width: 200px;
+    }
+    .join .joinform .join_table th span {
+        padding-left: 8px;
+    }
+    .join .joinform .join_table tbody tr td {
+        padding-left: 10px;
+    }
+    .join .joinform .join_table tbody tr td input {
+        margin-right: unset;
+    }
+    .join .joinform h1:nth-child(4), .join .joinform h1:nth-child(6) {
+        margin-left: 10px;
+    }
+    .join .joinform table:nth-child(5) tr input {
+        width: 180px;
+    }
+    .join .joinform table:nth-child(7) tr td input{
+        width: 56px;
+        margin-right: 5px;
+    }
+    .join .joinform table:nth-child(7) tr td input:not(:first-child) {
+        margin-left: 18px;
+        width: 30px;
+    }
+    .join .joinform .form_btn {
+        width: 160px;
+        font-size: 16px;
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+    #join_table2 tbody tr:nth-child(1) input{
+        margin-top: 15px;
+    }
+    #join_table2 tbody tr:nth-child(1) td{
+        display: flex;
+        flex-direction: column;
+    }
+    #join_table2 tbody tr:nth-child(1) .white_btn {
+        margin-left: 0px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+    #right {
+        margin-right: 10px;
+    }
+    .postCode_btn {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 26px;
+        line-height: 26px;
+        border: none;
+        background-color: #666;
+        color: white;
+        cursor: pointer;
+        /* display: none; */
+    }
+    #addbtn {
+        margin-left: 0px;
+    }
+    .join .joinform table:nth-child(5) tr:nth-child(5) input:nth-child(3) {
+        width: 210px;
+    }
+    .join .joinform table:nth-child(5) tr:nth-child(5) input:nth-child(4) {
+        margin-top: 0px;
+        width: 210px;
+    }
+    .small_span {
+        margin-left: 0px;
+        display: block;
+        margin-bottom: 12px;
+    }
+    #join_table2 tbody tr:nth-child(6) input {
+        margin-top: 12px;
+    }
+    #join_table2 tbody tr:nth-child(7) input {
+        margin-top: 12px;
+    }
+    #join_table2 tbody tr:nth-child(8) input {
+        margin-top: 12px;
+        width: 210px;
+    }
+    .join .joinform h1:nth-child(4), .join .joinform h1:nth-child(6) {
+        margin-left: 0px;
+        text-align: center;
+    }
 }

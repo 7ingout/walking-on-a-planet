@@ -134,3 +134,33 @@
 .header2 .menu_box li:not(:first-child){
     margin-left: 20px;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .header2 .search_box {
+        display: none;
+    }
+    .header2 h1 {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        top: 20%;
+    }
+    .header2 h1 span img {
+        width: 80%;
+        margin-bottom: -3px;
+        margin-right: -10px;
+    }
+    .header2 .menu_box {
+        display: flex;
+        letter-spacing: 1px;
+        cursor: pointer;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 15px;
+    }
+    .header2 .menu_box li:not(:first-child){
+        margin-left: 12px;
+    }  
+}
