@@ -69,3 +69,36 @@
 .btn:hover {
     filter: brightness(150%);
 }
+@media all and (min-width:320px) and (max-width:479px) {
+    .shop {
+        background-image: none;
+        background-color: black;
+        height: 600px;
+        overflow: hidden;
+        margin-top: -232px;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .shop .shop_p {
+        color: white;
+        padding-top: 120px;
+        padding-left: 0px;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .large_p {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 40px 0;
+    }
+    .shop .shop_p div:last-child {
+        font-size: 14px;
+    }
+    .join_box  {
+        display: none;
+    }
+    .join_box .inner_ul {
+        display: none;
+    }
+}

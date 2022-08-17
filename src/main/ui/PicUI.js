@@ -35,6 +35,28 @@ const PicUI = ( {pics} ) => {
                         </Link>
                     </SwiperSlide>
                 ))}    
+            </Swiper>
+            <Swiper
+             slidesPerView={3}
+             spaceBetween={0}
+             slidesPerGroup={3}
+             loop={true}
+             loopFillGroupWithBlank={true}
+             pagination={{
+             clickable: true,
+             }}
+             navigation={true}
+             modules={[Pagination, Navigation, Autoplay]}
+             className="mySwiper2"
+             autoplay={{delay: 5000}}>
+                {pics.map(pic=> (
+                    <SwiperSlide key = {pic.no}>
+                        <Link to={`/trips/${pic.cityNational}`}>
+                            <img className='pic_img' src={pic.cityImg} alt='cityImg' />
+                            <div className='ti'>{pic.cityDesc}</div>
+                        </Link>
+                    </SwiperSlide>
+                ))}    
 
             </Swiper>
         </div>

@@ -12,7 +12,7 @@ const UsedTrade2 = ( {good} ) => {
                 </div>
                 <div className='small_char'>{good.productSeller}</div>
                 <div className='big_char'>{good.productName}</div>
-                <div className='how_many'><span>장바구니에 담아놓은 사람 수</span>{good.reserve}명</div>
+                <div className='how_many'>{good.reserve}명<span>예약중</span></div>
             </Link> 
         </li>
     );

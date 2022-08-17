@@ -39,3 +39,41 @@
 .pic_img:hover  {
     filter: brightness(70%);
 }
+.mySwiper2 {
+    display: none;
+}
+@media all and (min-width:320px) and (max-width:479px) {
+    .PicUI {
+        height: 420px;
+    }
+    .PicUI  .gallery_h {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        display: unset;
+    }
+    .PicUI  .gallery_h li:nth-child(2) {
+        padding-left: 10px;
+        padding: 10px;
+    }
+    .PicUI  .gallery_h h1 {
+        padding-top: 50px;
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    .PicUI .gallery_h li:last-child {
+        letter-spacing: 3px;
+    }
+    .swiper-slide img {
+        height: 200px;
+    }
+    .PicUI .ti {
+        display: none;
+     }
+    .mySwiper {
+        display: none;
+    }
+    .mySwiper2 {
+        display: block;
+    }
+}
