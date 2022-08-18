@@ -85,6 +85,7 @@ const JoinForm = () => {
         const response = await axios.get(`${API_URL}/idCh`);
         const Iddb = response.data;
         let sameNum = 0;
+        var regId = /^[A-Za-z0-9]{8,12}$/;		
         Iddb.forEach( id => {
             if(userId.value === id.userId){
                 sameNum++;
@@ -98,7 +99,9 @@ const JoinForm = () => {
             alert('중복아이디입니다.');
         } else if(userId.value === null || userId.value === '') {
             alert('아이디를 입력해주세요.');
-        } 
+        } else if(!regId.test(userId.value)) {
+            alert('영문/숫자 8~12자 이내로 입력');	
+        }
         else {
             alert('사용가능한 아이디입니다.');
             setidCk(true);
@@ -146,6 +149,7 @@ const JoinForm = () => {
       }
      // 폼 submit 이벤트
      const onSubmit = (e) => {
+
         if(window.confirm("가입하시겠습니까?")){
             e.preventDefault();
             // if(isNaN(formData.userPhone)){
@@ -164,7 +168,10 @@ const JoinForm = () => {
                     alert('아이디 중복확인을 해주세요.')
                 } else if(!mailCk) {
                     alert('이메일 형식을 확인해주세요')
-                }
+                } 
+                // else if( !result ) {
+                //     alert("비밀번호 정규식 규칙 위반!!");
+                // }
             }
             else {
                 // alert("모든 기입란에 기입해주세요");
@@ -210,6 +217,7 @@ const JoinForm = () => {
                                     id="userId"
                                     value={formData.userId}
                                     onChange={onChange}
+                                    placeholder="영문/숫자 모두 포함, 8~12자 이내로 입력"
                                     />
                                     <span type='text' id='doubleCk' className='white_btn' onClick={(e)=>{OnIdCh(e);}}>중복확인</span>
                                     {/* <span className='small_span'>(영문소문자/숫자, 4~16자)</span> */}
@@ -221,6 +229,7 @@ const JoinForm = () => {
                                     <input id='pass' name="userPass" type="password"
                                     value={formData.userPass}
                                     onChange={onChange}
+                                    placeholder='최소 8자, 하나 이상의 문자와 숫자'
                                     />
                                     {/* <span className='small_span'>(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span> */}
                                 </td>

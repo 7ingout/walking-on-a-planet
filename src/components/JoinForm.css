@@ -211,7 +211,7 @@
         margin-left: 10px;
     }
     .join .joinform table:nth-child(5) tr input {
-        width: 180px;
+        width: 210px;
     }
     .join .joinform table:nth-child(7) tr td input{
         width: 56px;
@@ -222,7 +222,7 @@
         width: 30px;
     }
     .join .joinform .form_btn {
-        width: 160px;
+        width: 150px;
         font-size: 16px;
         margin-top: 80px;
         margin-bottom: 120px;

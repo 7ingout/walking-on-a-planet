@@ -17,7 +17,7 @@ const DestinationsUI = ( {trips} ) => {
             [name]: value
         })
     }
-
+    const len = trips.length;
     const onSubmit = (e) => {
         e.preventDefault();
         if(formData.searchInput === "") {
@@ -47,11 +47,15 @@ const DestinationsUI = ( {trips} ) => {
                 { userId === 'admin' ? <Link to='/addTrip'><div className='addTrip'>국가 추가하기</div></Link> : ''}
             </div>
             <Link to='/destinations'><div id='alldes'>전체 국가보기</div></Link>
-            <ul>
-                {trips.map(trip=> (
-                    <Destinations2 key = {trip.no} trip={trip} />
-                ))}   
-            </ul>
+            { len > 0 ? 
+                <ul>
+                    {trips.map(trip=> (
+                        <Destinations2 key = {trip.no} trip={trip} />
+                    ))}   
+                </ul>
+            :
+                <div className='noSearch'>검색 결과가 없습니다.</div>
+            }
         </div>
     );
 };

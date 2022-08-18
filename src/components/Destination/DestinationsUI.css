@@ -101,6 +101,13 @@
     color: var(--main-color);
 }
 
+.noSearch{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
 @media all and (min-width:320px) and (max-width:479px)  {
     .destination .des_header {
         max-width: 340px;
@@ -159,5 +166,8 @@
     }
     #alldes {
         margin-left: 10px;
+    }
+    .noSearch{
+        max-width: 340px;
     }
 }
