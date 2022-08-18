@@ -25,3 +25,25 @@
 .des_li:hover .big_char{
     text-decoration: underline;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .des_li {
+        width: unset;
+        height: 240px;
+        margin-bottom: 120px;
+        margin-top: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .des_li:not(:nth-child(3n)) {
+        margin-right: 5px;
+    }
+    .des_li .small_char {
+        margin-top: 12px;
+        margin-bottom: 2px;
+        margin-left: 10px;
+    }
+    .des_li .big_char {
+        margin-left: 10px;
+    }
+}

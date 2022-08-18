@@ -8,7 +8,7 @@ const Footer = () => {
             <ul className='big_ul'>
                 <li>
                     <div className='Footer_box'>
-                        <h1>Walking On a Planet</h1>
+                        <h1><Link to='/about'>Walking On a Planet</Link></h1>
                         <div>나를 찾아 떠나는 여행</div>
                         <div>FOLLOW US</div>
                         <ul className='sns_menu'>

@@ -157,3 +157,56 @@
 #eventform {
     margin-top: 0px;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    #EventH {
+        text-align: center;
+    }
+    .AddGoods {
+        width: 100%;
+    }
+    .AddGoods .addform {
+        width: 100%;
+        max-width: 340px;
+        overflow: hidden;
+    }
+    .AddGoods .add_table th {
+        padding-left: 10px;
+        width: 40%;
+        font-size: 14px;
+    }
+    #AddEvent .imgBox {
+        width: 220px;
+        height: 150px;
+    }
+    #AddEvent  .imgBox .addimg {
+        position: absolute;
+        width: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #AddEvent  .imgBox .addimg img {
+        width: 100%;
+    }
+    #AddEvent  .imgInput {
+        width: 220px;
+        height: 150px;
+    }
+    #AddEvent .imgview {
+        width: 220px;
+        height: 150px;
+    }
+    .AddGoods .add_table tbody tr:not(:nth-child(2)) input {
+        width: 220px;
+    }
+    .AddGoods textarea {
+        width: 220px;
+    }
+    .AddGoods .add_table td {
+        padding-left: 10px;
+    }
+    .AddGoods .form_btn {
+        width: 160px;
+    }
+}
