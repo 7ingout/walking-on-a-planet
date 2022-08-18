@@ -209,4 +209,33 @@
     .AddGoods .form_btn {
         width: 160px;
     }
+
+
+    .AddGoods .trade_bg {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+    }
+    .AddGoods .trade_bg img {
+        width: 100%;
+        filter: brightness(90%);
+        height: 100%;
+        object-fit: cover;
+    }
+    .AddGoods .trade_header {
+        position: relative;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .AddGoods .trade_header h1 {
+        bottom: 60px;    
+        font-size: 28px;
+    }
+    .AddGoods .trade_header div {
+        font-size: 12px;
+        width: 78px;
+        height: 16px;
+        line-height: 16px;
+    }
 }

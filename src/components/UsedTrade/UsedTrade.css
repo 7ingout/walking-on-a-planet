@@ -32,3 +32,40 @@
 .how_many span {
     margin-left: 5px;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .trade_li {
+        width: 100%;
+        max-width: 340px;
+        height: 540px;
+        /* margin-left: 10px;
+        margin-right: 10px; */
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .trade_li .goodsimg {
+        height: 480px;
+        display: flex;
+        align-items: center;
+    }
+    .trade_li:not(:nth-child(3n)) {
+        margin-left: unset;
+        margin-right: unset;
+        width: 100%;
+    max-width: 340px;
+    height: 540px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    }
+    .trade_li img {
+        width: 100%;
+        border-radius: 25px;
+    }
+    .trade_li .small_char {
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    .trade_li .big_char {
+        font-size: 20px;
+    }
+}

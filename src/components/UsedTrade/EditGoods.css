@@ -148,3 +148,118 @@
 #noInput {
     background-color: #eee;
 }
+@media all and (min-width:320px) and (max-width:479px)  {
+    .EditGoods .trade_bg {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+    }
+    .EditGoods .trade_bg img {
+        width: 100%;
+        filter: brightness(90%);
+        height: 100%;
+        object-fit: cover;
+    }
+    .EditGoods .trade_header {
+        position: relative;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .EditGoods .trade_header h1 {
+        font-size: 28px;
+    }
+    .EditGoods .trade_header div {
+        font-size: 12px;
+        width: 78px;
+        height: 16px;
+        line-height: 16px;
+    }
+    
+    .EditGoods .addform {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .EditGoods .add_table {
+        width: 100%;
+        margin-top: 60px;
+    }
+    .EditGoods .add_table th {
+        padding-left: 10px;
+    }
+    .EditGoods .add_table td {
+        padding-left: 6px;
+    }
+    .EditGoods .add_table tbody tr:first-child {
+        border-top:  1px solid #ddd;
+    }
+    .EditGoods .add_table tbody tr:not(:nth-child(2)) input {
+        width: 220px;
+    }
+    .EditGoods .form_btn {
+        width: 150px;
+    }
+    .EditGoods textarea {
+        margin: 15px 0;
+        resize: none;
+        height: 200px;
+        width: 220px;
+        outline: none;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        font-size: 15px;
+        color: #444;
+        padding-top: 10px;
+    }
+    .imgDiv {
+        margin: 15px 0;
+        position: relative;
+    }
+    .EditGoods .imgBox {
+        width: 220px;
+        height: 300px;
+        /* background-color: darkseagreen; */
+        border: 1px solid #ccc;
+        position: relative;
+    }
+    .EditGoods .imgBox .addimg {
+        position: absolute;
+        width: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .imgBox .addimg img {
+        width: 100%;
+    }
+    .EditGoods .imgInput {
+        position: absolute;
+        width: 220px;
+        height: 150px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .EditGoods .imgview {
+        width: 220px;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    #editInput {
+        z-index: 10;
+        opacity: 0;
+    }
+    
+    #noInput {
+        background-color: #eee;
+    }
+
+
+
+   
+  
+}
