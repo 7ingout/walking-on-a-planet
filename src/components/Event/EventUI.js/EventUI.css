@@ -78,3 +78,64 @@
 .inform div:nth-child(2){
     margin-top: 80px;
 }
+@media all and (min-width:320px) and (max-width:479px) {
+    .EventUI .Eventbg {
+        margin-top: -150px;
+        height: 650px;
+        overflow: hidden;
+    }
+    .EventUI .Eventbg img {
+        width: unset;
+    }
+    .EventUI .Eventbg .Event_title {
+        top: 69%;
+    }
+    .EventUI .Eventbg .Event_title .small_title {
+        font-size: 30px;
+    }
+    .EventUI .Eventbg .Event_title .middle_title {
+        font-size: 32px;
+    }
+    .EventUI .Eventbg .Event_title .large_title {
+        font-size: 70px;
+        margin-top: 0px;
+    }
+    .EventUI .Eventbg .Event_title div:last-child {
+        width: 320px;
+        font-size: 14px;
+    }
+    .EventUI ul {
+        padding-top: 10px;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        display: unset;
+        padding-bottom: 0;
+    }
+    .goodd {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        display: unset;
+    }
+    .good {
+        padding-top: 60px;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .inform {
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .inform div:nth-child(2){
+        margin-top: 40px;
+        margin-bottom: 10px;
+    } 
+    .addPics {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 140px;
+    }
+
+}

@@ -85,3 +85,19 @@
 #join_btn:hover {
     border: 1px solid #111;
 }
+@media all and (min-width:320px) and (max-width:479px) {
+    .login .loginform {
+        max-width: 450px;
+    }
+    .login .loginform .center_table {
+        display: unset;
+    }
+    .login .loginform .small_menu {
+        margin-right: 10px;
+    }
+    .login .loginform .login_table {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 240px;
+    }
+}

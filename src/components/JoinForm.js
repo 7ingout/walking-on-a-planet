@@ -96,7 +96,10 @@ const JoinForm = () => {
                 userId: "",
             })
             alert('중복아이디입니다.');
-        } else {
+        } else if(userId.value === null || userId.value === '') {
+            alert('아이디를 입력해주세요.');
+        } 
+        else {
             alert('사용가능한 아이디입니다.');
             setidCk(true);
         }
