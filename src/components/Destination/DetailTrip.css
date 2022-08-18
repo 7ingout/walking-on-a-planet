@@ -69,3 +69,58 @@
 .cityMap  img {
     width: 100%;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .detialTrip .detailBg {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+    }
+    .detialTrip .detailBg img {
+        margin-top: 0px;
+        width: 100%;
+        filter: brightness(90%);
+        height: 100%;
+        object-fit: cover;
+    }
+    .detialTrip .detail_box {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .detialTrip .detail_box .detail_h {
+        margin-top: 40px;
+        position: relative;
+    }
+    .detialTrip .detail_box .detail_h div div:first-child {
+        font-weight: bold;
+    }
+    .detialTrip .detail_box .detail_h h1 {
+        font-size: 48px;
+        margin-top: 0px;
+        color: var(--main-color);
+        font-weight: bold;
+    }
+    .detialTrip .detail_box .cityDesc {
+        margin-top: 40px;
+        font-size: 16px;
+    }
+    .editdelete {
+        display: flex;
+        position: absolute;
+        top: -6px;
+        right: 0;
+    }
+    .editdelete div {
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .cityMap {
+        max-width: 360px;
+    }
+    .cityMap  img {
+        width: 100%;
+    }
+}

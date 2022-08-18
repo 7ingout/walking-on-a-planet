@@ -158,9 +158,9 @@ const AddTrip = () => {
                                         <img src='/addimg.png' alt='addimg'/>
                                     </div>
                                 </div>
-                                <input type="file" className='imgInput' name="cityMapImg" onChange={onChangeImg2}/>
+                                <input type="file"  className='imgInput' name="cityMapImg" onChange={onChangeImg2}/>
                                 {
-                                    formData.cityMapImg && <img src={`${API_URL}/upload2/${formData.cityMapImg}`} alt="" className='imgview'/>
+                                    formData.cityMapImg && <img src={`${API_URL}/upload2/${formData.cityMapImg}`} alt="" id='imgInput2' className='imgview'/>
                                 }
                             </div>
                             <div>
