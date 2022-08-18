@@ -153,15 +153,15 @@ const AddTrip = () => {
                             <th>지도</th>
                             <td className='flextd'>
                             <div className='imgDiv'>
-                                    <div className='imgBox'>
-                                        <div className='addimg'>
-                                            <img src='/addimg.png' alt='addimg'/>
-                                        </div>
+                                <div id='imgBox2' className='imgBox'>
+                                    <div className='addimg'>
+                                        <img src='/addimg.png' alt='addimg'/>
                                     </div>
-                                    <input type="file" className='imgInput' name="cityMapImg" onChange={onChangeImg2}/>
-                                    {
-                                        formData.cityMapImg && <img src={`${API_URL}/upload2/${formData.cityMapImg}`} alt="" className='imgview'/>
-                                    }
+                                </div>
+                                <input type="file" className='imgInput' name="cityMapImg" onChange={onChangeImg2}/>
+                                {
+                                    formData.cityMapImg && <img src={`${API_URL}/upload2/${formData.cityMapImg}`} alt="" className='imgview'/>
+                                }
                             </div>
                             <div>
                                 <a href='https://www.amcharts.com/visited_countries/' target="_blank" rel='noreferrer'><div className='createMap'>지도 구하러가기</div></a>

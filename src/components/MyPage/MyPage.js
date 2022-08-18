@@ -2,7 +2,6 @@ import React from 'react';
 import { getCookie } from '../../util/cookie';
 import Header from '../Header';
 import CartContainer from './container/CartContainer';
-// import MyPostContainer from './container/MyPostContainer';
 import './MyPage.css'
 
 const MyPage = () => {
@@ -18,7 +17,6 @@ const MyPage = () => {
                 </div>
             </div>
             <CartContainer />
-            {/* <MyPostContainer /> */}
         </div>
     );
 };

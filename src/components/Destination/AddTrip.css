@@ -180,3 +180,112 @@
     margin-left: 20px;
     margin-top: 5px;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .AddTrip .add_bg {
+        height: 320px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .AddTrip .add_bg img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        object-fit: cover;
+        filter: brightness(70%);
+    }
+    .AddTrip .add_header {
+        position: relative;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .AddTrip .add_header h1 {
+        font-size: 28px;
+    }
+    .AddTrip .add_header div {
+        font-size: 12px;
+        width: 140px;
+        height: 16px;
+        line-height: 16px;
+    }
+    #edit_header div {
+        width: 228px;
+    }
+    .AddTrip .addform {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .AddTrip .add_table {
+        width: 100%;
+        /* margin: 0 auto; */
+        margin-top: 60px;
+    }
+    .AddTrip .add_table th {
+        padding-left: 10px;
+    }
+    .AddTrip .add_table td {
+        padding-left: 10px;
+    }
+    .AddTrip .add_table tr:not(:first-child):not(:last-child) td input {
+        margin-right: 0px;
+        width: 220px;
+    }
+    .AddTrip .form_btn {
+        width: 150px;
+    }
+    .AddTrip textarea {
+        width: 220px;
+    }
+    .imgDiv {
+        margin: 15px 0;
+        position: relative;
+    }
+    .imgBox {
+        /* margin-left: 10px; */
+        width: 220px;
+        height: 150px;
+    }
+    .imgBox .addimg {
+        position: absolute;
+        width: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .imgBox .addimg img {
+        width: 100%;
+    }
+    .imgInput {
+        position: absolute;
+        width: 220px;
+        height: 150px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .imgview {
+        width: 220px;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .createMap {
+        width: 160px;
+        margin-left: 10px;
+    }
+    .flextd {
+        display: unset;
+    }
+    .exp {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    #imgBox2 {
+        margin-left: 10px;
+    }
+}

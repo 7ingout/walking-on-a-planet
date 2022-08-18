@@ -113,7 +113,7 @@ const EditTrip = () => {
             console.log(e);
         })
     }
-    if(loading) return <div>로딩중</div>
+    if(loading) return <div className='spinner_bg'><div className="spinner"><div className="double-bounce1"></div><div className="double-bounce2"></div></div></div>
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
     if(!trip) return null;
     return (

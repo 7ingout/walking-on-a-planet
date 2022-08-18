@@ -158,11 +158,6 @@
         width: 140px;
     }
     #alldes {
-        width: 100%;
-        max-width: 1600px;
-        margin: 0 auto;
-        margin-bottom: 60px;
-        display: block;
-        color: var(--main-color);
+        margin-left: 10px;
     }
 }
