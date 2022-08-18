@@ -14,7 +14,6 @@
     transition: 0.3s;
     height: 100%;
 }
-
 .event_li .small_char {
     font-size: 16px;
     font-weight: bold;
@@ -50,9 +49,9 @@
 
 
 @media all and (min-width:320px) and (max-width:479px) {
-.event_li {
-    width: unset;
-    margin-bottom: 4px;
-    height: unset; 
-}
+    .event_li {
+        width: unset;
+        margin-bottom: 4px;
+        height: unset; 
+    }
 }

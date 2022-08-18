@@ -25,7 +25,6 @@
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
-  
 }
 .DetailEvent .detail_d .btns {
     display: flex;
@@ -46,4 +45,15 @@
 }
 .goRight {
     cursor: pointer;
+}
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .DetailEvent .detail_d .btns div img {
+        width: 40px;
+        margin-top: 5px;
+    }
+    .detail_h h1 {
+        margin-top: 30px;
+        margin-bottom: 6px;
+    }
 }

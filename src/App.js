@@ -22,6 +22,7 @@ import DetailEvent from './components/Event/DetailEvent';
 import AddEvent from './components/Event/AddEvent';
 import SearchDestinaions from './components/Destination/SearchDestinaions';
 import MyTrade from './components/UsedTrade/MyTrade';
+import About from './components/About';
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ function App() {
           <Route path="/addEvent" element = {<AddEvent/>}/>
           <Route path="/search/:searchInput" element = {<SearchDestinaions/>}/>
           <Route path="/my/:userId" element = {<MyTrade/>}/>
+          <Route path="/about" element = {<About/>}/>
         </Routes>
       <Footer />
     </div>

@@ -49,7 +49,7 @@ const Footer = () => {
                         <li className='bold'>SHOP</li>
                         <li><Link to='/usedtrade'>used trade</Link></li>
                         <li id='la_li' className='bold'>ABOUT US</li>
-                        <li className='lala_li'>About Walking On a Planet</li>
+                        <li className='lala_li'><Link to='/about'>About Walking On a Planet</Link></li>
                     </ul>
                 </li>
             </ul>
