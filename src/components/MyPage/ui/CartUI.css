@@ -53,3 +53,40 @@
 .noCart {
     margin-bottom: 120px;
 }
+
+@media all and (min-width:320px) and (max-width:479px) {
+    .cartUI {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .cartUI h1 {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+    .cartUI .cart_table {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .total td {
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .total td span {
+        padding-right: 20px;
+    }
+    .buy {
+        float: unset;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .noCart {
+        margin-bottom: 120px;
+    }
+}
