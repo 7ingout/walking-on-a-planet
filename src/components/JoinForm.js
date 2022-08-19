@@ -147,6 +147,8 @@ const JoinForm = () => {
         })
         return value;
       }
+
+    const [ psCh, setPassCheck ] = useState(false);
      // 폼 submit 이벤트
      const onSubmit = (e) => {
 
@@ -159,23 +161,34 @@ const JoinForm = () => {
             //         userPhone: ""
             //     })
             // }
-            if(formData.userId !== "" && formData.userPass !== "" &&
-            formData.userName !== "" && formData.userPhone !== "" &&
-            formData.userMail !== ""){
-                if(idCk && mailCk){
-                    joinMember();
-                } else if(!idCk) {
-                    alert('아이디 중복확인을 해주세요.')
-                } else if(!mailCk) {
-                    alert('이메일 형식을 확인해주세요')
-                } 
-                // else if( !result ) {
-                //     alert("비밀번호 정규식 규칙 위반!!");
-                // }
-            }
-            else {
-                // alert("모든 기입란에 기입해주세요");
-                alert("* 표시가 붙은 항목에 모두 기입주세요");
+            var text = document.querySelector('#pass').value;
+            console.log(text);
+                // eslint-disable-next-line
+            let regPass = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/;
+            if (regPass.test(text) === false) {
+                alert('비밀번호는 영문/숫자 조합으로 8-20자리 입력해주세요.')
+            }else {
+                setPassCheck(true);
+                if(formData.userId !== "" && formData.userPass !== "" &&
+                formData.userName !== "" && formData.userPhone !== "" &&
+                formData.userMail !== ""){
+                    if(idCk && mailCk){
+                        joinMember();
+                    } else if(!idCk) {
+                        alert('아이디 중복확인을 해주세요.')
+                    } else if(!mailCk) {
+                        alert('이메일 형식을 확인해주세요')
+                    }  else if(!psCh) {
+                        alert('비밀번호는 영문/숫자 조합으로 8-20자리 입력해주세요.')
+                    }
+                    // else if( !result ) {
+                    //     alert("비밀번호 정규식 규칙 위반!!");
+                    // }
+                }
+                else {
+                    // alert("모든 기입란에 기입해주세요");
+                    alert("* 표시가 붙은 항목에 모두 기입주세요");
+                }
             }
         } else{
             alert("가입이 취소되었습니다");
