@@ -66,15 +66,26 @@ const JoinForm = () => {
             setMailCk(false);
         }
     }
+    const [passwordCk2, setPwdCkText2] = useState(false);
     const OnPwCh = () => {
         const userPw = document.querySelector('#pass');
         const userPwCh = document.querySelector('#passCk');
         const passInform = document.querySelector('#passCkMessage');
         passInform.style.color = 'crimson';
+        userPw.addEventListener('keyup', function(){
+            if(userPw.value !== userPwCh.value) {
+                setPwdCkText2(false);
+            } else {
+                setPwdCkText2(true);
+                passInform.innerHTML = ''
+            }
+        })
         userPwCh.addEventListener('keyup', function(){
             if(userPw.value !== userPwCh.value) {
+                setPwdCkText2(false);
                 passInform.innerHTML = '비밀번호가 일치하지 않습니다.';
             } else {
+                setPwdCkText2(true);
                 passInform.innerHTML = ''
             }
         })
@@ -172,7 +183,7 @@ const JoinForm = () => {
                 if(formData.userId !== "" && formData.userPass !== "" &&
                 formData.userName !== "" && formData.userPhone !== "" &&
                 formData.userMail !== ""){
-                    if(idCk && mailCk){
+                    if(idCk && mailCk && passwordCk2){
                         joinMember();
                     } else if(!idCk) {
                         alert('아이디 중복확인을 해주세요.')
@@ -180,6 +191,8 @@ const JoinForm = () => {
                         alert('이메일 형식을 확인해주세요')
                     }  else if(!psCh) {
                         alert('비밀번호는 영문/숫자 조합으로 8-20자리 입력해주세요.')
+                    } else if(!passwordCk2) {
+                        alert("비밀번호가 일치하는지 확인해주세요.");
                     }
                     // else if( !result ) {
                     //     alert("비밀번호 정규식 규칙 위반!!");
